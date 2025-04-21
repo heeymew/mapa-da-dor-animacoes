@@ -1,0 +1,126 @@
+.animacoes-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+.animacoes-header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.animacoes-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.animacoes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    width: 100%;
+    max-width: 800px;
+}
+
+.animacao-card {
+    background-color: #ffffff;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.animacao-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.animacao-preview {
+    width: 100%;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.animacao-preview img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.animacao-nome {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Mensagem quando não há animações disponíveis */
+.sem-animacoes {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 1.25rem;
+    padding: 2rem;
+}
+
+.voltar-btn {
+    background: url('../assets/imagens/voltar-btn.png') no-repeat center;
+    background-size: contain;
+    width: 7rem;
+    height: 7rem;
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+.animacoes-grid {
+    grid-template-columns: 1fr;
+}
+
+.animacoes-header h2 {
+    font-size: 1.75rem;
+}
+
+.voltar-btn {
+    width: 5rem;
+    height: 5rem;
+    bottom: 1rem;
+    left: 1rem;
+}
+
+.animacao-preview {
+    height: 180px;
+}
+}
+
+@media (max-width: 480px) {
+.animacoes-container {
+    padding: 1rem;
+}
+
+.animacoes-header h2 {
+    font-size: 1.5rem;
+}
+
+.animacao-nome {
+    font-size: 1rem;
+}
+}

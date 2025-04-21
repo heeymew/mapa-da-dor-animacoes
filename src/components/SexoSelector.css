@@ -1,0 +1,63 @@
+.sexo-container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.sexo-card {
+  all: unset;
+  cursor: pointer;
+  border-radius: 1rem;
+  transition: transform 0.2s ease;
+  width: 300px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sexo-card:hover {
+  transform: scale(1.05);
+}
+
+.sexo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.titulo {
+  font-size: 4.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .sexo-container {
+    gap: 2rem;
+  }
+  
+  .sexo-card {
+    height: 450px !important;
+  }
+  
+  .titulo {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 250px) {
+  .sexo-container {
+    gap: 2rem;
+  }
+  
+  .sexo-card {
+    width: 300px !important;
+  }
+  
+  .titulo {
+    font-size: 2.75rem;
+  }
+}

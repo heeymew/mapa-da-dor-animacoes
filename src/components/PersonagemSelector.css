@@ -1,0 +1,83 @@
+.personagem-container {
+    border: none;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+  }
+
+.personagem-card {
+  all: unset;
+  border-radius: 68px;
+  transition: transform 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 300px;
+  padding: 1rem;
+  cursor: pointer;
+  align-items: center;
+}
+
+.personagem-card:hover {
+  transform: scale(1.05);
+}
+
+.personagem-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.personagem-container {
+  border: none;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  padding: 2rem;
+  flex-wrap: nowrap;
+}
+
+@media (max-width: 855px) {
+
+.personagem-container {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  margin-bottom: 50px;
+}
+
+.personagem-card {
+  all: unset;
+  cursor: pointer;
+  width: calc(50% - 1rem);
+  height: 180px;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.personagem-card:hover {
+  transform: scale(1.05);
+}
+
+.personagem-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.sexo-card {
+  height: 250px;
+  }
+  
+.personagem-card {
+  height: 280px;
+  }
+}
