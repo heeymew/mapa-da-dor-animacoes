@@ -53,11 +53,6 @@
 
 /* Corpos */
 
-.corpo-costas {
-  position: absolute;
-  left: 60%;
-}
-
 
 /* Meninos */ 
 
@@ -115,21 +110,21 @@
 
 .menino_branco-costas-cabeca {
   top: 19px;
-  left: calc(25% - 58px);
+  left: calc(75% + -10rem);
   width: 160px;
   height: 160px;
 }
 
 .menino_branco-costas-costas {
   top: 178px;
-  left: calc(75% - 16px);
+  left: calc(75% + -7.5rem);
   width: 84px;
   height: 136px;
 }
 
 .menino_branco-costas-braco-direito {
   top: 194px;
-  left: calc(75% + 76px);
+  left: calc(75% + -1.875rem);
   width: 28px;
   height: 176px;
   transform: rotate(168deg);
@@ -137,7 +132,7 @@
 
 .menino_branco-costas-braco-esquerdo {
   top: 196px;
-  left: calc(75% + -48px);
+  left: calc(75% + -9.5rem);
   width: 28px;
   height: 176px;
   transform: rotate(190deg);
@@ -145,7 +140,7 @@
 
 .menino_branco-costas-perna-direita {
   top: 310px;
-  left: calc(75% + 36px);
+  left: calc(75% + -4.375rem);
   width: 52px;
   height: 210px;
   transform: rotate(172deg);
@@ -153,12 +148,11 @@
 
 .menino_branco-costas-perna-esquerda {
   top: 310px;
-  left: calc(75% - 32px);
+  left: calc(75% + -8.5rem);
   width: 53px;
   height: 210px;
   transform: rotate(7deg);
 }
-
 
 
 /* Corpo menino negro */
@@ -214,21 +208,21 @@
 
 .menino_negro-costas-cabeca {
   top: 30px;
-    left: calc(25% - 32px);
-    width: 160px;
-    height: 170px;
+  left: calc(75% - 8.5rem);
+  width: 160px;
+  height: 170px;
 }
 
 .menino_negro-costas-costas {
   top: 200px;
-  left: calc(75% - -8px);
+  left: calc(75% - 6.125rem);
   width: 82px;
   height: 122px;
 }
 
 .menino_negro-costas-braco-direito {
   top: 214px;
-  left: calc(75% - -99px);
+  left: calc(75% - 0.625rem);
   width: 34px;
   height: 170px;
   transform: rotate(163deg);
@@ -236,7 +230,7 @@
 
 .menino_negro-costas-braco-esquerdo {
   top: 214px;
-  left: calc(75% - 35px);
+  left: calc(75% - 8.625rem);
   width: 34px;
   height: 170px;
   transform: rotate(18deg);
@@ -244,7 +238,7 @@
 
 .menino_negro-costas-perna-direita {
   top: 318px;
-  left: calc(75% - -52px);
+  left: calc(75% - 3.25rem);
   width: 56px;
   height: 196px;
   transform: rotate(174deg);
@@ -252,7 +246,7 @@
 
 .menino_negro-costas-perna-esquerda {
   top: 318px;
-  left: calc(75% - 12px);
+  left: calc(75% - 7.125rem);
   width: 56px;
   height: 196px;
   transform: rotate(7deg);
@@ -312,21 +306,21 @@
 
 .menino_asiatico-costas-cabeca {
   top: 32px;
+  left: calc(75% - 8.5rem);
   width: 160px;
   height: 168px;
-  left: -30px;
 }
 
 .menino_asiatico-costas-costas {
   top: 200px;
-  left: calc(25% - -8px);
+  left: calc(75% - 6.125rem);
   width: 90px;
   height: 128px;
 }
 
 .menino_asiatico-costas-braco-direito {
   top: 212px;
-  left: calc(25% - -108px);
+  left: calc(75% - -0.125rem);
   width: 38px;
   height: 165px;
   transform: rotate(159deg);
@@ -334,7 +328,7 @@
 
 .menino_asiatico-costas-braco-esquerdo {
   top: 212px;
-  left: calc(25% - 40px);
+  left: calc(75% - 9rem);
   width: 38px;
   height: 165px;
   transform: rotate(20deg);
@@ -342,7 +336,7 @@
 
 .menino_asiatico-costas-perna-direita {
   top: 325px;
-  left: calc(25% - -56px);
+  left: calc(75% - 3rem);
   width: 60px;
   height: 190px;
   transform: rotate(176deg);
@@ -350,7 +344,7 @@
 
 .menino_asiatico-costas-perna-esquerda {
   top: 325px;
-  left: calc(25% - 8px);
+  left: calc(75% - 7rem);
   width: 60px;
   height: 190px;
   transform: rotate(185deg);
@@ -410,21 +404,21 @@
 
 .menino_pardo-costas-cabeca {
   top: 32px;
+  left: calc(75% - 8.5rem);
   width: 160px;
   height: 168px;
-  left: -30px;
 }
 
 .menino_pardo-costas-costas {
   top: 200px;
-  left: calc(25% - -8px);
+  left: calc(75% - 6.125rem);
   width: 90px;
   height: 128px;
 }
 
 .menino_pardo-costas-braco-direito {
   top: 212px;
-  left: calc(25% - -102px);
+  left: calc(75% - 0.25rem);
   width: 32px;
   height: 165px;
   transform: rotate(347deg);
@@ -432,25 +426,25 @@
 
 .menino_pardo-costas-braco-esquerdo {
   top: 218px;
+  left: calc(75% - 8.3rem);
   width: 32px;
   height: 154px;
-  left: -30px;
   transform: rotate(13deg);
 }
 
 .menino_pardo-costas-perna-direita {
   top: 324px;
+  left: calc(75% - 3rem);
   width: 56px;
   height: 191px;
-  left: 58px;
   transform: rotate(173deg);
 }
 
 .menino_pardo-costas-perna-esquerda {
   top: 325px;
+  left: calc(75% - 7rem);
   width: 56px;
   height: 190px;
-  left: -9px;
   transform: rotate(188deg);
 }
 
@@ -511,14 +505,14 @@
 
 .menina_branca-costas-cabeca {
   top: 19px;
-  left: calc(25% - 26px);
+  left: calc(75% - 8.5rem);
   width: 160px;
   height: 160px;
 }
 
 .menina_branca-costas-costas {
   top: 178px;
-  left: calc(25% - -16px);
+  left: calc(75% - 5.75rem);
   width: 80px;
   height: 152px;
   z-index: 999;
@@ -526,34 +520,34 @@
 
 .menina_branca-costas-braco-direito {
   top: 192px;
+  left: calc(75% - 0.25rem);
   width: 34px;
   height: 159px;
-  left: -26px;
-  transform: rotate(24deg);
+  transform: rotate(156deg);
 }
 
 .menina_branca-costas-braco-esquerdo {
   top: 194px;
+  left: calc(75% - 8.25rem);
   width: 34px;
   height: 160px;
-  left: 104px;
-  transform: rotate(156deg);
+  transform: rotate(24deg);
 }
 
 .menina_branca-costas-perna-direita {
   top: 290px;
-  left: calc(25% - 4px);
+  left: calc(75% - 2.75rem);
   width: 54px;
   height: 223px;
-  transform: rotate(8deg);
+  transform: rotate(174deg);
 }
 
 .menina_branca-costas-perna-esquerda {
   top: 292px;
-  left: calc(25% - -60px);
+  left: calc(75% - 7rem);
   width: 54px;
   height: 223px;
-  transform: rotate(174deg);
+  transform: rotate(8deg);
 }
 
 /* Menina Negra */
@@ -582,7 +576,6 @@
   height: 160px;
   left: -102px;
   transform: rotate(17deg);
-
 }
 
 .menina_negra-frente-braco-esquerdo {
@@ -613,7 +606,7 @@
 
 .menina_negra-costas-cabeca {
   top: 40px;
-  left: calc(25% - 26px);
+  left: calc(75% - 8.5rem);
   width: 160px;
   height: 160px;
   z-index: 999;
@@ -621,7 +614,7 @@
 
 .menina_negra-costas-costas {
   top: 178px;
-  left: calc(25% - -8px);
+  left: calc(75% - 6.25rem);
   width: 80px;
   height: 152px;
   z-index: 998;
@@ -629,23 +622,23 @@
 
 .menina_negra-costas-braco-direito {
   top: 208px;
+  left: calc(75% - 1.5rem);
   width: 34px;
   height: 159px;
-  left: -18px;
-  transform: rotate(14deg);
+  transform: rotate(166deg);
 }
 
 .menina_negra-costas-braco-esquerdo {
   top: 208px;
+  left: calc(75% - 8rem);
   width: 34px;
   height: 160px;
-  left: 80px;
-  transform: rotate(166deg);
+  transform: rotate(14deg);
 }
 
 .menina_negra-costas-perna-direita {
   top: 292px;
-  left: calc(25% - -42px);
+  left: calc(75% - 3.75rem);
   width: 52px;
   height: 223px;
   transform: rotate(175deg);
@@ -653,7 +646,7 @@
 
 .menina_negra-costas-perna-esquerda {
   top: 292px;
-  left: calc(25% - 4px);
+  left: calc(75% - 7rem);
   width: 52px;
   height: 223px;
   transform: rotate(8deg);
@@ -713,7 +706,7 @@
 
 .menina_asiatica-costas-cabeca {
   top: 20px;
-  left: calc(25% - 26px);
+  left: calc(75% - 8.25rem);
   width: 186px;
   height: 186px;
   z-index: 999;
@@ -721,7 +714,7 @@
 
 .menina_asiatica-costas-costas {
   top: 189px;
-  left: calc(25% - -26px);
+  left: calc(75% - 5rem);
   width: 88px;
   height: 166px;
   z-index: 998;
@@ -729,33 +722,33 @@
 
 .menina_asiatica-costas-braco-direito {
   top: 229px;
+  left: calc(75% - 0.125rem);
   width: 34px;
   height: 143px;
-  left: 103px;
   transform: rotate(162deg);
 }
 
 .menina_asiatica-costas-braco-esquerdo {
   top: 229px;
+  left: calc(75% - 7rem);
   width: 34px;
   height: 143px;
-  left: -2px;
   transform: rotate(22deg);
 }
 
 .menina_asiatica-costas-perna-direita {
   top: 332px;
+  left: calc(75% - 2.5rem);
   width: 52px;
   height: 184px;
-  left: 67px;
   transform: rotate(178deg);
 }
 
 .menina_asiatica-costas-perna-esquerda {
   top: 332px;
+  left: calc(75% - 5.5rem);
   width: 52px;
   height: 184px;
-  left: 14px;
   transform: rotate(185deg);
 }
 
@@ -773,9 +766,9 @@
 
 .menina_parda-frente-barriga {
   top: 196px;
-    left: calc(25% - 70px);
-    width: 78px;
-    height: 135px;
+  left: calc(25% - 70px);
+  width: 78px;
+  height: 135px;
   z-index: 998;
 }
 
@@ -815,7 +808,7 @@
 
 .menina_parda-costas-cabeca {
   top: 40px;
-  left: calc(25% - 22px);
+  left: calc(75% - 8rem);
   width: 170px;
   height: 160px;
   z-index: 999;
@@ -823,7 +816,7 @@
 
 .menina_parda-costas-costas {
   top: 200px;
-  left: calc(25% - -28px);
+  left: calc(75% - 5rem);
   width: 78px;
   height: 135px;
   z-index: 998;
@@ -831,33 +824,33 @@
 
 .menina_parda-costas-braco-direito {
   top: 231px;
+  left: calc(75% - 0rem);
   width: 36px;
   height: 160px;
-  left: -2px;
-  transform: rotate(200deg);
+  transform: rotate(162deg);
 }
 
 .menina_parda-costas-braco-esquerdo {
   top: 228px;
+  left: calc(75% - 6.75rem);
   width: 36px;
   height: 160px;
-  left: 104px;
-  transform: rotate(162deg);
+  transform: rotate(200deg);
 }
 
 .menina_parda-costas-perna-direita {
   top: 332px;
+  left: calc(75% - 2.5rem);
   width: 46px;
   height: 186px;
-  left: 68px;
   transform: rotate(174deg);
 }
 
 .menina_parda-costas-perna-esquerda {
   top: 332px;
+  left: calc(75% - 5rem);
   width: 46px;
   height: 186px;
-  left: 20px;
   transform: rotate(184deg);
 }
 
@@ -903,4 +896,101 @@
   left: calc(75% - 30px);
   width: 60px;
   height: 91px;
+}
+
+@media (min-width: 251px) and (max-width: 767px) {
+  .menino_branco-frente-cabeca {
+    top: 1.1rem;
+    left: calc(25% - 100px);
+    width: 160px;
+    height: 160px;
+  }
+  
+  .menino_branco-frente-barriga {
+    top: 178px;
+    left: calc(25% - 63px);
+    width: 84px;
+    height: 136px;
+    z-index: 999;
+  }
+  
+  .menino_branco-frente-braco-esquerdo {
+    top: 198px;
+    left: calc(25% + 23px);
+    width: 28px;
+    height: 176px;
+    transform: rotate(172deg);
+  }
+  
+  .menino_branco-frente-braco-direito {
+    top: 198px;
+    left: calc(25% - 97px);
+    width: 30px;
+    height: 176px;
+    transform: rotate(7deg);
+  }
+  
+  .menino_branco-frente-perna-direita {
+    top: 310px;
+    left: calc(25% - 81px);
+    width: 52px;
+    height: 210px;
+    transform: rotate(7deg);
+  }
+  
+  .menino_branco-frente-perna-esquerda {
+    top: 310px;
+    left: calc(25% + -12px);
+    width: 52px;
+    height: 210px;
+    transform: rotate(173deg);
+  }
+  
+  /* Costas */
+  
+  .menino_branco-costas-cabeca {
+    top: 19px;
+    left: calc(25% - 58px);
+    width: 160px;
+    height: 160px;
+  }
+  
+  .menino_branco-costas-costas {
+    top: 178px;
+    left: calc(75% - 16px);
+    width: 84px;
+    height: 136px;
+  }
+  
+  .menino_branco-costas-braco-direito {
+    top: 194px;
+    left: calc(75% + 76px);
+    width: 28px;
+    height: 176px;
+    transform: rotate(168deg);
+  }
+  
+  .menino_branco-costas-braco-esquerdo {
+    top: 196px;
+    left: calc(75% + -48px);
+    width: 28px;
+    height: 176px;
+    transform: rotate(190deg);
+  }
+  
+  .menino_branco-costas-perna-direita {
+    top: 310px;
+    left: calc(75% + 36px);
+    width: 52px;
+    height: 210px;
+    transform: rotate(172deg);
+  }
+  
+  .menino_branco-costas-perna-esquerda {
+    top: 310px;
+    left: calc(75% - 32px);
+    width: 53px;
+    height: 210px;
+    transform: rotate(7deg);
+  }
 }
