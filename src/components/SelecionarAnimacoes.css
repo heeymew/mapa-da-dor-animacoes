@@ -6,19 +6,19 @@
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-  }
+}
   
 .animacoes-header {
     width: 100%;
     text-align: center;
     margin-bottom: 2rem;
 }
-
+  
 .animacoes-header h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
-
+  
 .animacoes-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -26,7 +26,7 @@
     width: 100%;
     max-width: 800px;
 }
-
+  
 .animacao-card {
     background-color: #ffffff;
     border-radius: 24px;
@@ -38,12 +38,12 @@
     flex-direction: column;
     align-items: center;
 }
-
+  
 .animacao-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
-
+  
 .animacao-preview {
     width: 100%;
     height: 220px;
@@ -52,13 +52,13 @@
     align-items: center;
     padding: 1rem;
 }
-
+  
 .animacao-preview img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
 }
-
+  
 .animacao-nome {
     width: 100%;
     text-align: center;
@@ -67,8 +67,7 @@
     font-weight: bold;
     color: #333;
 }
-
-/* Mensagem quando não há animações disponíveis */
+  
 .sem-animacoes {
     grid-column: 1 / -1;
     text-align: center;
@@ -76,42 +75,73 @@
     padding: 2rem;
 }
 
-.voltar-btn {
-    background: url('../assets/imagens/voltar-btn.png') no-repeat center;
-    background-size: contain;
-    width: 7rem;
-    height: 7rem;
+.botoes-fixos-mobile {
     position: fixed;
-    bottom: 2rem;
-    left: 2rem;
-    border: none;
-    cursor: pointer;
+    bottom: 1rem;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
     z-index: 1000;
+    pointer-events: none;
+}
+  
+.botao-voltar-mobile,
+.botao-confirmar-mobile {
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    width: 6rem;
+    pointer-events: auto;
+}
+  
+.botao-voltar-mobile img,
+.botao-confirmar-mobile img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
+.botao-voltar-animacoes-fix,
+.botao-confirmar-fix {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+@media (min-width: 251px) and (max-width: 767px) {
 .animacoes-grid {
     grid-template-columns: 1fr;
+}
+  
+.animacoes-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.animacoes-header {
+    text-align: center;
+    margin-bottom: 0;
 }
 
 .animacoes-header h2 {
     font-size: 1.75rem;
 }
 
-.voltar-btn {
-    width: 5rem;
-    height: 5rem;
-    bottom: 1rem;
-    left: 1rem;
-}
-
 .animacao-preview {
     height: 180px;
 }
-}
 
-@media (max-width: 480px) {
 .animacoes-container {
     padding: 1rem;
 }
@@ -122,5 +152,14 @@
 
 .animacao-nome {
     font-size: 1rem;
+}
+
+.botao-voltar-animacoes-fix,
+.botao-confirmar-fix {
+  display: flex;
+  align-self: flex-end;
+  left: 3rem
+  ;
+  z-index: 1000;
 }
 }

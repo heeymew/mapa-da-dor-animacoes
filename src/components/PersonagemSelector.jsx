@@ -1,5 +1,5 @@
 import React from "react";
-import "./PersonagemSelector.css";
+import '../components/PersonagemSelector.css'
 
 import meninoBrancoFrente from "../assets/imagens/personagens/menino_branco_frente.png";
 import meninaBrancaFrente from "../assets/imagens/personagens/menina_branca_frente.png";

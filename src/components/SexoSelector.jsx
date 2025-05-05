@@ -1,9 +1,7 @@
 import React from "react";
-import "./SexoSelector.css";
-
+import "../components/SexoSelector.css";
 import masculinoImg from "../assets/imagens/sexo_masculino.png";
 import femininoImg from "../assets/imagens/sexo_feminino.png";
-
 
 const SexoSelector = ({ onSelect }) => {
   return (

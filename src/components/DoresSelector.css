@@ -1,5 +1,6 @@
 /* container de sintomas */
 .dores-container {
+  position: relative;
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -7,6 +8,7 @@
   margin: 0 auto;
   border-radius: 24px;
   overflow: hidden;
+  padding-bottom: 80px;
 }
 
 .conteudo-esquerda {
@@ -51,401 +53,450 @@
   object-fit: contain;
 }
 
-/* Corpos */
+/* Desktop */
 
+/* Corpos */
 
 /* Meninos */ 
 
 /* Menino Branco */
 
 /* Frente */
-.menino_branco-frente-cabeca {
-  top: 19px;
-  left: calc(25% - 100px);
-  width: 160px;
-  height: 160px;
-}
 
-.menino_branco-frente-barriga {
-  top: 178px;
-  left: calc(25% - 63px);
-  width: 84px;
-  height: 136px;
+.menino_branco-frente-cabeca {
+  top: 1.125rem;
+  left: calc(25% - 6.25rem);
+  width: 10rem;
+  height: 10rem;
   z-index: 999;
 }
 
+.menino_branco-frente-barriga {
+  top: 11.125rem;
+  left: calc(25% - 4rem);
+  width: 5.25rem;
+  height: 8.5rem;
+  z-index: 5;
+}
+
 .menino_branco-frente-braco-esquerdo {
-  top: 198px;
-  left: calc(25% + 23px);
-  width: 28px;
-  height: 176px;
+  top: 12.375rem;
+  left: calc(25% + 1.45rem);
+  width: 1.75rem;
+  height: 11rem;
   transform: rotate(172deg);
+  z-index: 1;
 }
 
 .menino_branco-frente-braco-direito {
-  top: 198px;
-  left: calc(25% - 97px);
-  width: 30px;
-  height: 176px;
+  top: 12.375rem;
+  left: calc(25% - 6.125rem);
+  width: 2.25rem;
+  height: 11rem;
   transform: rotate(7deg);
+  z-index: 1;
 }
 
 .menino_branco-frente-perna-direita {
-  top: 310px;
+  top: 19.375rem;
   left: calc(25% - 81px);
-  width: 52px;
-  height: 210px;
+  width: 3.25rem;
+  height: 13.125rem;
   transform: rotate(7deg);
+  z-index: 2;
 }
 
 .menino_branco-frente-perna-esquerda {
-  top: 310px;
+  top: 19.375rem;
   left: calc(25% + -12px);
-  width: 52px;
-  height: 210px;
+  width: 3.25rem;
+  height: 13.125rem;
   transform: rotate(173deg);
+  z-index: 2;
 }
 
 /* Costas */
 
 .menino_branco-costas-cabeca {
-  top: 19px;
+  top: 1.125rem;
   left: calc(75% + -10rem);
-  width: 160px;
-  height: 160px;
-}
-
-.menino_branco-costas-costas {
-  top: 178px;
-  left: calc(75% + -7.5rem);
-  width: 84px;
-  height: 136px;
-}
-
-.menino_branco-costas-braco-direito {
-  top: 194px;
-  left: calc(75% + -1.875rem);
-  width: 28px;
-  height: 176px;
-  transform: rotate(168deg);
-}
-
-.menino_branco-costas-braco-esquerdo {
-  top: 196px;
-  left: calc(75% + -9.5rem);
-  width: 28px;
-  height: 176px;
-  transform: rotate(190deg);
-}
-
-.menino_branco-costas-perna-direita {
-  top: 310px;
-  left: calc(75% + -4.375rem);
-  width: 52px;
-  height: 210px;
-  transform: rotate(172deg);
-}
-
-.menino_branco-costas-perna-esquerda {
-  top: 310px;
-  left: calc(75% + -8.5rem);
-  width: 53px;
-  height: 210px;
-  transform: rotate(7deg);
-}
-
-
-/* Corpo menino negro */
-/* Frente */
-.menino_negro-frente-cabeca {
-  top: 30px;
-  left: calc(25% - 110px);
-  width: 160px;
-  height: 170px;
-}
-
-.menino_negro-frente-barriga {
-  top: 200px;
-  left: calc(25% - 79px);
-  width: 94px;
-  height: 152px;
+  width: 10rem;
+  height: 10rem;
   z-index: 999;
 }
 
+.menino_branco-costas-costas {
+  top: 11.125rem;
+  left: calc(75% + -7.5rem);
+  width: 5.25rem;
+  height: 8.5rem;
+  z-index: 5;
+}
+
+.menino_branco-costas-braco-direito {
+  top: 12.125rem;
+  left: calc(75% + -1.875rem);
+  width: 1.75rem;
+  height: 11rem;
+  transform: rotate(168deg);
+  z-index: 1;
+}
+
+.menino_branco-costas-braco-esquerdo {
+  top: 12.125rem;
+  left: calc(75% + -9.5rem);
+  width: 1.75rem;
+  height: 11rem;
+  transform: rotate(190deg);
+  z-index: 1;
+}
+
+.menino_branco-costas-perna-direita {
+  top: 19.375rem;
+  left: calc(75% + -4.375rem);
+  width: 3.25rem;
+  height: 13.125rem;
+  transform: rotate(172deg);
+  z-index: 2;
+}
+
+.menino_branco-costas-perna-esquerda {
+  top: 19.375rem;
+  left: calc(75% + -8.5rem);
+  width: 3.25rem;
+  height: 13.125rem;
+  transform: rotate(7deg);
+  z-index: 2;
+}
+
+/* Menino Negro */
+
+/* Frente */
+
+.menino_negro-frente-cabeca {
+  top: 2.125rem;
+  left: calc(75% + -7rem);
+  width: 10rem;
+  height: 10rem;
+  z-index: 999;
+}
+
+.menino_negro-frente-barriga {
+  top: 12.5rem;
+  left: calc(25% - 5rem);
+  width: 5.875rem;
+  height: 9.5rem;
+  z-index: 5;
+}
+
 .menino_negro-frente-braco-direito {
-  top: 226px;
-  width: 32px;
-  height: 155px;
-  left: -117px;
+  top: 14.125rem;
+  left: calc(25% - 7.375rem);
+  width: 2rem;
+  height: 9.75rem;
   transform: rotate(14deg);
+  z-index: 1;
 }
 
 .menino_negro-frente-braco-esquerdo {
   top: 226px;
+  left: calc(25% + 1.25rem);
   width: 32px;
   height: 156px;
-  left: 20px;
   transform: rotate(164deg);
+  z-index: 1;
 }
 
 .menino_negro-frente-perna-direita {
-  top: 348px;
-  width: 60px;
-  height: 168px;
-  left: -98px;
+  top: 19.375rem;
+  left: calc(25% - 6.125rem);
+  width: 3.75rem;
+  height: 13.125rem;
   transform: rotate(188deg);
+  z-index: 2;
 }
 
 .menino_negro-frente-perna-esquerda {
-  top: 348px;
-  width: 59px;
-  height: 168px;
-  left: -26px;
+  top: 19.375rem;
+  left: calc(75% + -1.75rem);
+  width: 3.75rem;
+  height: 13.125rem;
   transform: rotate(174deg);
+  z-index: 2;
 }
 
 /* Costas */
 
 .menino_negro-costas-cabeca {
-  top: 30px;
-  left: calc(75% - 8.5rem);
-  width: 160px;
-  height: 170px;
-}
-
-.menino_negro-costas-costas {
-  top: 200px;
-  left: calc(75% - 6.125rem);
-  width: 82px;
-  height: 122px;
-}
-
-.menino_negro-costas-braco-direito {
-  top: 214px;
-  left: calc(75% - 0.625rem);
-  width: 34px;
-  height: 170px;
-  transform: rotate(163deg);
-}
-
-.menino_negro-costas-braco-esquerdo {
-  top: 214px;
-  left: calc(75% - 8.625rem);
-  width: 34px;
-  height: 170px;
-  transform: rotate(18deg);
-}
-
-.menino_negro-costas-perna-direita {
-  top: 318px;
-  left: calc(75% - 3.25rem);
-  width: 56px;
-  height: 196px;
-  transform: rotate(174deg);
-}
-
-.menino_negro-costas-perna-esquerda {
-  top: 318px;
-  left: calc(75% - 7.125rem);
-  width: 56px;
-  height: 196px;
-  transform: rotate(7deg);
-}
-
-/* Menino Asiático */
-/* Frente */
-
-.menino_asiatico-frente-cabeca {
-  top: 32px;
-  left: calc(25% - 128px);
-  width: 160px;
-  height: 168px;
-}
-
-.menino_asiatico-frente-barriga {
-  top: 200px;
-  left: calc(25% - 92px);
-  width: 90px;
-  height: 128px;
+  top: 2.125rem;
+  left: calc(75% + -8.75rem);
+  width: 10rem;
+  height: 10rem;
   z-index: 999;
 }
 
+.menino_negro-costas-costas {
+  top: 11.125rem;
+  left: calc(75% + -6.25rem);
+  width: 5.25rem;
+  height: 8.5rem;
+  z-index: 5;
+}
+
+.menino_negro-costas-braco-direito {
+  top: 13.125rem;
+  left: calc(75% + -0.4rem);
+  width: 2.5rem;
+  height: 11rem;
+  transform: rotate(164deg);
+  z-index: 1;
+}
+
+.menino_negro-costas-braco-esquerdo {
+  top: 13.125rem;
+  left: calc(75% + -8.5rem);
+  width: 2rem;
+  height: 11rem;
+  transform: rotate(196deg);
+  z-index: 1;
+}
+
+.menino_negro-costas-perna-direita {
+  top: 19.375rem;
+  left: calc(75% + -3.25rem);
+  width: 3.75rem;
+  height: 13.125rem;
+  transform: rotate(174deg);
+  z-index: 2;
+}
+
+.menino_negro-costas-perna-esquerda {
+  top: 19.375rem;
+  left: calc(75% + -7.5rem);
+  width: 3.75rem;
+  height: 13.125rem;
+  transform: rotate(188deg);
+  z-index: 2;
+}
+
+/* Menino Asiático */
+
+/* Frente */
+
+.menino_asiatico-frente-cabeca {
+  top: 2rem;
+  left: calc(25% - 8rem);
+  width: 10rem;
+  height: 11rem;
+  z-index: 999;
+}
+
+.menino_asiatico-frente-barriga {
+  top: 12.5rem;
+  left: calc(25% - 5.75rem);
+  width: 5.625rem;
+  height: 8rem;
+  z-index: 5;
+}
+
 .menino_asiatico-frente-braco-direito {
-  top: 212px;
-  left: calc(25% - 138px);
-  width: 38px;
-  height: 165px;
+  top: 13.25rem;
+  left: calc(25% - 8.625rem);
+  width: 2.375rem;
+  height: 10.375rem;
   transform: rotate(20deg);
+  z-index: 1;
 }
 
 .menino_asiatico-frente-braco-esquerdo {
-  top: 212px;
-  left: calc(25% - -6px);
-  width: 38px;
-  height: 165px;
+  top: 13.25rem;
+  left: calc(25% + 0.375rem);
+  width: 2.375rem;
+  height: 10.375rem;
   transform: rotate(159deg);
+  z-index: 1;
 }
 
 .menino_asiatico-frente-perna-direita {
-  top: 325px;
+  top: 20.375rem;
   left: calc(25% - 110px);
-  width: 60px;
-  height: 190px;
+  width: 3.75rem;
+  height: 11.857rem;
   transform: rotate(185deg);
+  z-index: 2;
 }
 
 .menino_asiatico-frente-perna-esquerda {
-  top: 325px;
-  left: calc(25% - 46px);
-  width: 60px;
-  height: 190px;
+  top: 20.375rem;
+  left: calc(25% - 2.875rem);
+  width: 3.75rem;
+  height: 11.875rem;
   transform: rotate(176deg);
+  z-index: 2;
 }
 
 /* Costas */
 
 .menino_asiatico-costas-cabeca {
-  top: 32px;
-  left: calc(75% - 8.5rem);
-  width: 160px;
-  height: 168px;
-}
-
-.menino_asiatico-costas-costas {
-  top: 200px;
-  left: calc(75% - 6.125rem);
-  width: 90px;
-  height: 128px;
-}
-
-.menino_asiatico-costas-braco-direito {
-  top: 212px;
-  left: calc(75% - -0.125rem);
-  width: 38px;
-  height: 165px;
-  transform: rotate(159deg);
-}
-
-.menino_asiatico-costas-braco-esquerdo {
-  top: 212px;
-  left: calc(75% - 9rem);
-  width: 38px;
-  height: 165px;
-  transform: rotate(20deg);
-}
-
-.menino_asiatico-costas-perna-direita {
-  top: 325px;
-  left: calc(75% - 3rem);
-  width: 60px;
-  height: 190px;
-  transform: rotate(176deg);
-}
-
-.menino_asiatico-costas-perna-esquerda {
-  top: 325px;
-  left: calc(75% - 7rem);
-  width: 60px;
-  height: 190px;
-  transform: rotate(185deg);
-}
-
-/* Menino Pardo */
-/* Frente */
-
-.menino_pardo-frente-cabeca {
-  top: 32px;
-  left: calc(25% - 110px);
-  width: 160px;
-  height: 168px;
-}
-
-.menino_pardo-frente-barriga {
-  top: 200px;
-  left: calc(25% - 79px);
-  width: 96px;
-  height: 138px;
+  top: 2.125rem;
+  left: calc(75% + -8.75rem);
+  width: 11rem;
+  height: 10rem;
   z-index: 999;
 }
 
+.menino_asiatico-costas-costas {
+  top: 11.125rem;
+  left: calc(75% + -6.25rem);
+  width: 5.75rem;
+  height: 8.5rem;
+  z-index: 5;
+}
+
+.menino_asiatico-costas-braco-direito {
+  top: 13.125rem;
+  left: calc(75% + 0.1rem);
+  width: 2.5rem;
+  height: 11rem;
+  transform: rotate(156deg);
+  z-index: 1;
+}
+
+.menino_asiatico-costas-braco-esquerdo {
+  top: 13.125rem;
+  left: calc(75% + -8.75rem);
+  width: 2.5rem;
+  height: 11rem;
+  transform: rotate(27deg);
+  z-index: 1;
+}
+
+.menino_asiatico-costas-perna-direita {
+  top: 19.375rem;
+  left: calc(75% + -3rem);
+  width: 3.5rem;
+  height: 13.125rem;
+  transform: rotate(174deg);
+  z-index: 2;
+}
+
+.menino_asiatico-costas-perna-esquerda {
+  top: 19.375rem;
+  left: calc(75% + -7rem);
+  width: 3.5rem;
+  height: 13.125rem;
+  transform: rotate(185deg);
+  z-index: 2;
+}
+
+/* Menino Pardo */
+
+/* Frente */
+
+.menino_pardo-frente-cabeca {
+  top: 2rem;
+  left: calc(25% - 6.875rem);
+  width: 10rem;
+  height: 10.5rem;
+  z-index: 999;
+}
+
+.menino_pardo-frente-barriga {
+  top: 12.5rem;
+  left: calc(25% - 4.875rem);
+  width: 6rem;
+  height: 8.625rem;
+  z-index: 5;
+}
+
 .menino_pardo-frente-braco-direito {
-  top: 226px;
-  width: 34px;
-  height: 155px;
-  left: -117px;
-  transform: rotate(10deg);
+  top: 13.125rem;
+  left: calc(25% - 6.75rem);
+  width: 2.125rem;
+  height: 9.75rem;
+  transform: rotate(18deg);
+  z-index: 1;
 }
 
 .menino_pardo-frente-braco-esquerdo {
-  top: 221px;
-  left: calc(25% - -26px);
-  width: 33px;
-  height: 165px;
+  top: 13.875rem;
+  left: calc(25% + 1.5rem);
+  width: 2.5rem;
+  height: 10.375rem;
   transform: rotate(166deg);
+  z-index: 1;
 }
 
 .menino_pardo-frente-perna-direita {
-  top: 334px;
-  width: 56px;
-  height: 182px;
-  left: -91px;
+  top: 21.5rem;
+  left: calc(25% - 5.75rem);
+  width: 3.5rem;
+  height: 11.375rem;
   transform: rotate(188deg);
+  z-index: 2;
 }
 
 .menino_pardo-frente-perna-esquerda {
-  top: 334px;
-  width: 56px;
-  height: 182px;
-  left: -20px;
+  top: 20.875rem;
+  left: calc(25% - 1.25rem);
+  width: 3.5rem;
+  height: 11.375rem;
   transform: rotate(169deg);
+  z-index: 2;
 }
 
 /* Costas */
 
 .menino_pardo-costas-cabeca {
-  top: 32px;
-  left: calc(75% - 8.5rem);
-  width: 160px;
-  height: 168px;
+  top: 2.125rem;
+  left: calc(75% + -8.75rem);
+  width: 11rem;
+  height: 10rem;
+  z-index: 999;
 }
 
 .menino_pardo-costas-costas {
-  top: 200px;
-  left: calc(75% - 6.125rem);
-  width: 90px;
-  height: 128px;
+  top: 11.125rem;
+  left: calc(75% + -5.75rem);
+  width: 5rem;
+  height: 8.5rem;
+  z-index: 5;
 }
 
 .menino_pardo-costas-braco-direito {
-  top: 212px;
-  left: calc(75% - 0.25rem);
-  width: 32px;
-  height: 165px;
-  transform: rotate(347deg);
+  top: 13.125rem;
+  left: calc(75% + -0.5rem);
+  width: 2.5rem;
+  height: 11rem;
+  transform: rotate(164deg);
+  z-index: 1;
 }
 
 .menino_pardo-costas-braco-esquerdo {
-  top: 218px;
-  left: calc(75% - 8.3rem);
-  width: 32px;
-  height: 154px;
-  transform: rotate(13deg);
+  top: 13.125rem;
+  left: calc(75% + -8.75rem);
+  width: 2.5rem;
+  height: 11rem;
+  transform: rotate(20deg);
+  z-index: 1;
 }
 
 .menino_pardo-costas-perna-direita {
-  top: 324px;
-  left: calc(75% - 3rem);
-  width: 56px;
-  height: 191px;
-  transform: rotate(173deg);
+  top: 19.375rem;
+  left: calc(75% + -2.85rem);
+  width: 3.5rem;
+  height: 13.125rem;
+  transform: rotate(174deg);
+  z-index: 2;
 }
 
 .menino_pardo-costas-perna-esquerda {
-  top: 325px;
-  left: calc(75% - 7rem);
-  width: 56px;
-  height: 190px;
-  transform: rotate(188deg);
+  top: 19.375rem;
+  left: calc(75% + -7.5rem);
+  width: 3.75rem;
+  height: 13.125rem;
+  transform: rotate(185deg);
+  z-index: 2;
 }
 
 /* Meninas */
@@ -455,99 +506,109 @@
 /* Frente */
 
 .menina_branca-frente-cabeca {
-  top: 19px;
-  left: calc(25% - 116px);
-  width: 160px;
-  height: 160px;
-}
-
-.menina_branca-frente-barriga {
-  top: 178px;
-  left: calc(25% - 80px);
-  width: 80px;
-  height: 152px;
+  top: 1.25rem;
+  left: calc(25% - 7.25rem);
+  width: 10rem;
+  height: 10rem;
   z-index: 999;
 }
 
+.menina_branca-frente-barriga {
+  top: 11.125rem;
+  left: calc(25% - 5rem);
+  width: 5rem;
+  height: 9.5rem;
+  z-index: 1;
+}
+
 .menina_branca-frente-braco-direito {
-  top: 195px;
-  width: 34px;
-  height: 160px;
-  left: -124px;
+  top: 12.125rem;
+  left: calc(25% - 7.75rem);
+  width: 2.125rem;
+  height: 10rem;
   transform: rotate(24deg);
+  z-index: 1;
 }
 
 .menina_branca-frente-braco-esquerdo {
-  top: 194px;
-  width: 34px;
-  height: 160px;
-  left: 10px;
+  top: 12.125rem;
+  left: calc(25% + 0.625rem);
+  width: 2.125rem;
+  height: 10rem;
   transform: rotate(156deg);
+  z-index: 1;
 }
 
 .menina_branca-frente-perna-direita {
-  top: 292px;
-  left: calc(25% - 104px);
-  width: 54px;
-  height: 223px;
+  top: 18.25rem;
+  left: calc(25% - 6.5rem);
+  width: 3.375rem;
+  height: 14rem;
   transform: rotate(8deg);
+  z-index: 2;
 }
 
 .menina_branca-frente-perna-esquerda {
-  top: 292px;
-  left: calc(25% - 31px);
-  width: 52px;
-  height: 223px;
+  top: 18.25rem;
+  left: calc(25% - 2rem);
+  width: 3.375rem;
+  height: 14rem;
   transform: rotate(172deg);
+  z-index: 2;
 }
 
 /* Costas */
 
 .menina_branca-costas-cabeca {
-  top: 19px;
+  top: 1.25rem;
   left: calc(75% - 8.5rem);
-  width: 160px;
-  height: 160px;
-}
-
-.menina_branca-costas-costas {
-  top: 178px;
-  left: calc(75% - 5.75rem);
-  width: 80px;
-  height: 152px;
+  width: 10rem;
+  height: 10rem;
   z-index: 999;
 }
 
+.menina_branca-costas-costas {
+  top: 11.125rem;
+  left: calc(75% - 5.75rem);
+  width: 5rem;
+  height: 9.5rem;
+  z-index: 5;
+}
+
 .menina_branca-costas-braco-direito {
-  top: 192px;
+  top: 12rem;
   left: calc(75% - 0.25rem);
-  width: 34px;
-  height: 159px;
+  width: 2.125rem;
+  height: 10rem;
   transform: rotate(156deg);
+  z-index: 1;
 }
 
 .menina_branca-costas-braco-esquerdo {
-  top: 194px;
+  top: 12rem;
   left: calc(75% - 8.25rem);
-  width: 34px;
-  height: 160px;
+  width: 2.125rem;
+  height: 10rem;
   transform: rotate(24deg);
+  z-index: 1;
 }
 
 .menina_branca-costas-perna-direita {
-  top: 290px;
+  top: 18.125rem;
   left: calc(75% - 2.75rem);
-  width: 54px;
-  height: 223px;
+  width: 3.375rem;
+  height: 14rem;
   transform: rotate(174deg);
+  z-index: 2;
 }
 
 .menina_branca-costas-perna-esquerda {
-  top: 292px;
+  top: 18.25rem;
   left: calc(75% - 7rem);
-  width: 54px;
-  height: 223px;
+  width: 3.375rem;
+  height: 14rem;
   transform: rotate(8deg);
+  z-index: 2;
 }
 
 /* Menina Negra */
@@ -555,201 +616,215 @@
 /* Frente */
 
 .menina_negra-frente-cabeca {
-  top: 40px;
-  left: calc(25% - 122px);
-  width: 160px;
-  height: 160px;
+  top: 2.5rem;
+  left: calc(25% - 7.625rem);
+  width: 10rem;
+  height: 10rem;
   z-index: 999;
 }
 
 .menina_negra-frente-barriga {
-  top: 178px;
-  left: calc(25% - 80px);
-  width: 80px;
-  height: 152px;
-  z-index: 998;
+  top: 11.125rem;
+  left: calc(25% - 4.25rem);
+  width: 4rem;
+  height: 9.5rem;
+  z-index: 5;
 }
 
 .menina_negra-frente-braco-direito {
-  top: 207px;
-  width: 34px;
-  height: 160px;
-  left: -102px;
+  top: 13rem;
+  left: calc(25% - 6.375rem);
+  width: 1.85rem;
+  height: 10rem;
   transform: rotate(17deg);
 }
 
 .menina_negra-frente-braco-esquerdo {
-  top: 208px;
-  width: 34px;
-  height: 160px;
-  left: -6px;
+  top: 13rem;
+  left: calc(25% - 0.375rem);
+  width: 2.125rem;
+  height: 10rem;
   transform: rotate(162deg);
 }
 
 .menina_negra-frente-perna-direita {
-  top: 292px;
-  left: calc(25% - 86px);
-  width: 52px;
-  height: 223px;
+  top: 18.25rem;
+  left: calc(25% - 5.375rem);
+  width: 3.25rem;
+  height: 14rem;
   transform: rotate(8deg);
 }
 
 .menina_negra-frente-perna-esquerda {
-  top: 292px;
+  top: 18.25rem;
   left: calc(25% - 37px);
-  width: 52px;
-  height: 223px;
+  width: 3.25rem;
+  height: 14rem;
   transform: rotate(172deg);
 }
 
 /* Costas */
 
 .menina_negra-costas-cabeca {
-  top: 40px;
+  top: 2.5rem;
   left: calc(75% - 8.5rem);
-  width: 160px;
-  height: 160px;
+  width: 10rem;
+  height: 10rem;
   z-index: 999;
 }
 
 .menina_negra-costas-costas {
-  top: 178px;
+  top: 11.125rem;
   left: calc(75% - 6.25rem);
-  width: 80px;
-  height: 152px;
-  z-index: 998;
+  width: 5rem;
+  height: 9.5rem;
+  z-index: 5;
 }
 
 .menina_negra-costas-braco-direito {
-  top: 208px;
+  top: 13rem;
   left: calc(75% - 1.5rem);
-  width: 34px;
-  height: 159px;
+  width: 1.5rem;
+  height: 10rem;
   transform: rotate(166deg);
+  z-index: 1;
 }
 
 .menina_negra-costas-braco-esquerdo {
-  top: 208px;
+  top: 13rem;
   left: calc(75% - 8rem);
-  width: 34px;
-  height: 160px;
+  width: 1.85rem;
+  height: 10rem;
   transform: rotate(14deg);
+  z-index: 1;
 }
 
 .menina_negra-costas-perna-direita {
-  top: 292px;
+  top: 18.25rem;
   left: calc(75% - 3.75rem);
-  width: 52px;
-  height: 223px;
+  width: 3.25rem;
+  height: 14rem;
   transform: rotate(175deg);
+  z-index: 2;
 }
 
 .menina_negra-costas-perna-esquerda {
-  top: 292px;
+  top: 18.25rem;
   left: calc(75% - 7rem);
-  width: 52px;
-  height: 223px;
+  width: 3.25rem;
+  height: 14rem;
   transform: rotate(8deg);
+  z-index: 2;
 }
 
-/* Menina Asiática */ 
+/* Menina Asiática */
+
+/* Frente */
 
 .menina_asiatica-frente-cabeca {
-  top: 20px;
-  left: calc(25% - 124px);
-  width: 186px;
-  height: 186px;
+  top: 1.25rem;
+  left: calc(25% - 7.75rem);
+  width: 11.625rem;
+  height: 11.625rem;
   z-index: 999;
 }
 
 .menina_asiatica-frente-barriga {
   top: 178px;
-  left: calc(25% - 82px);
-  width: 100px;
-  height: 152px;
+  left: calc(25% - 5.125rem);
+  width: 6.25rem;
+  height: 9.5rem;
   z-index: 998;
 }
 
 .menina_asiatica-frente-braco-direito {
-  top: 229px;
-  width: 34px;
-  height: 143px;
-  left: -110px;
+  top: 14.375rem;
+  left: calc(25% - 6.875rem);
+  width: 3.125rem;
+  height: 9rem;
   transform: rotate(22deg);
+  z-index: 1;
 }
 
 .menina_asiatica-frente-braco-esquerdo {
-  top: 229px;
-  width: 34px;
-  height: 143px;
-  left: 8px;
+  top: 14.375rem;
+  left: calc(25% + 0.5rem);
+  width: 3.125rem;
+  height: 9rem;
   transform: rotate(164deg);
+  z-index: 1;
 }
 
 .menina_asiatica-frente-perna-direita {
-  top: 327px;
-  width: 52px;
-  height: 184px;
-  left: -88px;
+  top: 20.5rem;
+  left: calc(25% - 5.5rem);
+  width: 3.25rem;
+  height: 11.5rem;
   transform: rotate(184deg);
+  z-index: 2;
 }
 
 .menina_asiatica-frente-perna-esquerda {
-  top: 327px;
-  width: 52px;
-  height: 184px;
-  left: -24px;
+  top: 20.5rem;
+  left: calc(25% - 1.5rem);
+  width: 3.25rem;
+  height: 11.5rem;
   transform: rotate(174deg);
+  z-index: 2;
 }
 
 /* Costas */
 
 .menina_asiatica-costas-cabeca {
-  top: 20px;
+  top: 1.25rem;
   left: calc(75% - 8.25rem);
-  width: 186px;
-  height: 186px;
+  width: 11.625rem;
+  height: 11.625rem;
   z-index: 999;
 }
 
 .menina_asiatica-costas-costas {
-  top: 189px;
+  top: 11.625rem;
   left: calc(75% - 5rem);
-  width: 88px;
-  height: 166px;
-  z-index: 998;
+  width: 5.5rem;
+  height: 10.375rem;
+  z-index: 5;
 }
 
 .menina_asiatica-costas-braco-direito {
-  top: 229px;
-  left: calc(75% - 0.125rem);
-  width: 34px;
-  height: 143px;
+  top: 14.375rem;
+  left: calc(75% - -0.5rem);
+  width: 1.5rem;
+  height: 9rem;
   transform: rotate(162deg);
+  z-index: 1;
 }
 
 .menina_asiatica-costas-braco-esquerdo {
-  top: 229px;
+  top: 14.375rem;
   left: calc(75% - 7rem);
-  width: 34px;
-  height: 143px;
-  transform: rotate(22deg);
+  width: 2rem;
+  height: 9rem;
+  transform: rotate(14deg);
+  z-index: 1;
 }
 
 .menina_asiatica-costas-perna-direita {
-  top: 332px;
+  top: 20.75rem;
   left: calc(75% - 2.5rem);
-  width: 52px;
-  height: 184px;
+  width: 3.25rem;
+  height: 11.5rem;
   transform: rotate(178deg);
+  z-index: 2;
 }
 
 .menina_asiatica-costas-perna-esquerda {
-  top: 332px;
+  top: 20.75rem;
   left: calc(75% - 5.5rem);
-  width: 52px;
-  height: 184px;
+  width: 3.25rem;
+  height: 11.5rem;
   transform: rotate(185deg);
+  z-index: 2;
 }
 
 /* Menina Parda */
@@ -757,104 +832,113 @@
 /* Frente */
 
 .menina_parda-frente-cabeca {
-  top: 40px;
+  top: 2.5rem;
   left: calc(25% - 122px);
-  width: 170px;
-  height: 160px;
+  width: 10.625rem;
+  height: 10rem;
   z-index: 999;
 }
 
 .menina_parda-frente-barriga {
-  top: 196px;
-  left: calc(25% - 70px);
-  width: 78px;
-  height: 135px;
-  z-index: 998;
+  top: 12.25rem;
+  left: calc(25% - 4.375rem);
+  width: 4.875rem;
+  height: 8.5rem;
+  z-index: 5;
 }
 
 .menina_parda-frente-braco-direito {
-  top: 222px;
-  width: 36px;
-  height: 160px;
-  left: -102px;
+  top: 13.875rem;
+  left: calc(25% - 6.375rem);
+  width: 2.25rem;
+  height: 10rem;
   transform: rotate(20deg);
+  z-index: 1;
 }
 
 .menina_parda-frente-braco-esquerdo {
   top: 228px;
-  width: 36px;
-  height: 160px;
-  left: 0px;
+  left: calc(25% + 0rem);
+  width: 2.25rem;
+  height: 10rem;
   transform: rotate(162deg);
+  z-index: 1;
 }
 
 .menina_parda-frente-perna-direita {
   top: 324px;
-  width: 46px;
-  height: 186px;
-  left: -82px;
+  left: calc(25% - 5.125rem);
+  width: 2.875rem;
+  height: 11.625rem;
   transform: rotate(8deg);
+  z-index: 2;
 }
 
 .menina_parda-frente-perna-esquerda {
-  top: 322px;
-  width: 46px;
-  height: 186px;
-  left: -34px;
+  top: 20.125rem;
+  left: calc(25% - 2.125rem);
+  width: 2.875rem;
+  height: 11.625rem;
   transform: rotate(176deg);
+  z-index: 2;
 }
 
 /* Costas */
 
 .menina_parda-costas-cabeca {
-  top: 40px;
+  top: 2.5rem;
   left: calc(75% - 8rem);
-  width: 170px;
-  height: 160px;
+  width: 10.625rem;
+  height: 10rem;
   z-index: 999;
 }
 
 .menina_parda-costas-costas {
-  top: 200px;
+  top: 12.5rem;
   left: calc(75% - 5rem);
-  width: 78px;
-  height: 135px;
-  z-index: 998;
+  width: 4.875rem;
+  height: 8.5rem;
+  z-index: 5;
 }
 
 .menina_parda-costas-braco-direito {
-  top: 231px;
+  top: 14.5rem;
   left: calc(75% - 0rem);
-  width: 36px;
-  height: 160px;
+  width: 2.25rem;
+  height: 10rem;
   transform: rotate(162deg);
+  z-index: 1;
 }
 
 .menina_parda-costas-braco-esquerdo {
-  top: 228px;
+  top: 14.5rem;
   left: calc(75% - 6.75rem);
-  width: 36px;
-  height: 160px;
+  width: 2.25rem;
+  height: 10rem;
   transform: rotate(200deg);
+  z-index: 1;
 }
 
 .menina_parda-costas-perna-direita {
-  top: 332px;
+  top: 20.75rem;
   left: calc(75% - 2.5rem);
-  width: 46px;
-  height: 186px;
+  width: 2.875rem;
+  height: 11.625rem;
   transform: rotate(174deg);
+  z-index: 2;
 }
 
 .menina_parda-costas-perna-esquerda {
-  top: 332px;
+  top: 20.75rem;
   left: calc(75% - 5rem);
-  width: 46px;
-  height: 186px;
+  width: 2.875rem;
+  height: 11.625rem;
   transform: rotate(184deg);
+  z-index: 2;
 }
 
 /*Responsividade */
+
 @media (max-width: 768px) {
   .dores-container {
     flex-direction: column;
@@ -868,7 +952,11 @@
     font-size: 1.5rem;
   }
   
-  .imagem-frente, .imagem-costas {
+.imagem-costas {
+    height: 250px;
+}
+
+.imagem-costas {
     height: 250px;
   }
 }
@@ -898,99 +986,968 @@
   height: 91px;
 }
 
+/* Responsividade Mobile */
 @media (min-width: 251px) and (max-width: 767px) {
-  .menino_branco-frente-cabeca {
-    top: 1.1rem;
-    left: calc(25% - 100px);
-    width: 160px;
-    height: 160px;
-  }
-  
-  .menino_branco-frente-barriga {
-    top: 178px;
-    left: calc(25% - 63px);
-    width: 84px;
-    height: 136px;
-    z-index: 999;
-  }
-  
-  .menino_branco-frente-braco-esquerdo {
-    top: 198px;
-    left: calc(25% + 23px);
-    width: 28px;
-    height: 176px;
-    transform: rotate(172deg);
-  }
-  
-  .menino_branco-frente-braco-direito {
-    top: 198px;
-    left: calc(25% - 97px);
-    width: 30px;
-    height: 176px;
-    transform: rotate(7deg);
-  }
-  
-  .menino_branco-frente-perna-direita {
-    top: 310px;
-    left: calc(25% - 81px);
-    width: 52px;
-    height: 210px;
-    transform: rotate(7deg);
-  }
-  
-  .menino_branco-frente-perna-esquerda {
-    top: 310px;
-    left: calc(25% + -12px);
-    width: 52px;
-    height: 210px;
-    transform: rotate(173deg);
-  }
-  
-  /* Costas */
-  
-  .menino_branco-costas-cabeca {
-    top: 19px;
-    left: calc(25% - 58px);
-    width: 160px;
-    height: 160px;
-  }
-  
-  .menino_branco-costas-costas {
-    top: 178px;
-    left: calc(75% - 16px);
-    width: 84px;
-    height: 136px;
-  }
-  
-  .menino_branco-costas-braco-direito {
-    top: 194px;
-    left: calc(75% + 76px);
-    width: 28px;
-    height: 176px;
-    transform: rotate(168deg);
-  }
-  
-  .menino_branco-costas-braco-esquerdo {
-    top: 196px;
-    left: calc(75% + -48px);
-    width: 28px;
-    height: 176px;
-    transform: rotate(190deg);
-  }
-  
-  .menino_branco-costas-perna-direita {
-    top: 310px;
-    left: calc(75% + 36px);
-    width: 52px;
-    height: 210px;
-    transform: rotate(172deg);
-  }
-  
-  .menino_branco-costas-perna-esquerda {
-    top: 310px;
-    left: calc(75% - 32px);
-    width: 53px;
-    height: 210px;
-    transform: rotate(7deg);
+
+.dores-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.conteudo-esquerda, .conteudo-direita {
+  width: 100%;
+  padding: 0px;
+  border-radius: 32px;
+  box-shadow: none;
+}
+
+.mensagemselecao {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  line-height: 1.2;
+  text-align: center;
+  margin-top: 0;
+  padding-top: 0rem;
+  order: -1;
+}
+
+.imagens-corpo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  position: relative;
+  margin-top: 1rem;
+}
+
+.imagem-frente, .imagem-costas {
+  height: 200px;
+  object-fit: contain;
+}
+
+.botao-corpo {
+  background: none;
+  border: none;
+  opacity: 0;
+  position: absolute;
+  cursor: pointer;
+}
+
+.container-botao {
+  position: absolute;
+  inset: 0;
+}
+
+.corpo-frente {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.corpo-costas {
+  position: relative;
+  margin-top: 1rem;
+}
+
+/* Corpos */
+
+/* Meninos */
+
+/* Menino Branco */
+
+/* Frente */
+
+.menino_branco-frente-cabeca {
+  top: 1.1rem;
+  left: 1%;
+  width: 5.75rem;
+  height: 4.5rem;
+  z-index: 999;
+}
+
+.menino_branco-frente-barriga {
+  top: 5.125rem;
+  left: 7%;
+  width: 2.25rem;
+  height: 3.75rem;
+  z-index: 5;
+}
+
+.menino_branco-frente-braco-direito {
+  top: 5.75rem;
+  left: 3%;
+  width: 1.5rem;
+  height: 4.5rem;
+  transform: rotate(7deg);
+  z-index: 1;
+}
+
+.menino_branco-frente-braco-esquerdo {
+  top: 5.75rem;
+  left: 16%;
+  width: 1.5rem;
+  height: 4.5rem;
+  transform: rotate(172deg);
+  z-index: 1;
+}
+
+.menino_branco-frente-perna-direita {
+  top: 8.5rem;
+  left: 5%;
+  width: 1.75rem;
+  height: 5.5rem;
+  transform: rotate(7deg);
+  z-index: 2;
+}
+
+.menino_branco-frente-perna-esquerda {
+  top: 8.5rem;
+  left: 12.5%;
+  width: 1.5rem;
+  height: 5.5rem;
+  transform: rotate(173deg);
+  z-index: 2;
+}
+
+/* Costas */
+
+.menino_branco-costas-cabeca {
+  top: 13.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+.menino_branco-costas-costas {
+  top: 17.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2.25rem;
+  height: 3.5rem;
+  z-index: 5;
+}
+
+.menino_branco-costas-braco-direito {
+  top: 18.375rem;
+  left: 57%;
+  transform: translateX(-50%) rotate(168deg);
+  width: 1rem;
+  height: 4.5rem;
+  z-index: 1;
+}
+
+.menino_branco-costas-braco-esquerdo {
+  top: 18.375rem;
+  left: 42%;
+  transform: translateX(-50%) rotate(190deg);
+  width: 1.5rem;
+  height: 4.5rem;
+  z-index: 1;
+}
+
+.menino_branco-costas-perna-direita {
+  top: 21rem;
+  left: 53%;
+  transform: translateX(-50%) rotate(172deg);
+  width: 1.75rem;
+  height: 5.5rem;
+  z-index: 2;
+}
+
+.menino_branco-costas-perna-esquerda {
+  top: 21rem;
+  left: 46%;
+  transform: translateX(-50%) rotate(7deg);
+  width: 1.75rem;
+  height: 5.5rem;
+  z-index: 2;
+}
+
+/* Menino Negro */
+
+/* Frente */
+
+.menino_negro-frente-cabeca {
+  top: 1.1rem;
+  left: 1%;
+  width: 5.75rem;
+  height: 4.5rem;
+  z-index: 999;
+}
+
+.menino_negro-frente-barriga {
+  top: 5.125rem;
+  left: 7%;
+  width: 2.25rem;
+  height: 3.75rem;
+  z-index: 5;
+}
+
+.menino_negro-frente-braco-direito {
+  top: 6rem;
+  left: 1%;
+  width: 1.5rem;
+  height: 4.5rem;
+  transform: rotate(7deg);
+  z-index: 1;
+}
+
+.menino_negro-frente-braco-esquerdo {
+  top: 5.75rem;
+  left: 16%;
+  width: 1.5rem;
+  height: 4.5rem;
+  transform: rotate(172deg);
+  z-index: 1;
+}
+
+.menino_negro-frente-perna-direita {
+  top: 8.5rem;
+  left: 5%;
+  width: 1.75rem;
+  height: 5.5rem;
+  transform: rotate(7deg);
+  z-index: 2;
+}
+
+.menino_negro-frente-perna-esquerda {
+  top: 8.5rem;
+  left: 12.5%;
+  width: 1.5rem;
+  height: 5.5rem;
+  transform: rotate(173deg);
+  z-index: 2;
+}
+
+/* Costas */
+
+.menino_negro-costas-cabeca {
+  top: 13.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4.5rem;
+  height: 4.5rem;
+  z-index: 999;
+}
+
+.menino_negro-costas-costas {
+  top: 17.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2.25rem;
+  height: 3.5rem;
+  z-index: 5;
+}
+
+.menino_negro-costas-braco-direito {
+  top: 18.375rem;
+  left: 57%;
+  transform: translateX(-50%) rotate(168deg);
+  width: 1rem;
+  height: 4.5rem;
+  z-index: 1;
+}
+
+.menino_negro-costas-braco-esquerdo {
+  top: 18.375rem;
+  left: 42%;
+  transform: translateX(-50%) rotate(190deg);
+  width: 1.5rem;
+  height: 4.5rem;
+  z-index: 1;
+}
+
+.menino_negro-costas-perna-direita {
+  top: 21rem;
+  left: 53%;
+  transform: translateX(-50%) rotate(172deg);
+  width: 1.75rem;
+  height: 5.5rem;
+  z-index: 2;
+}
+
+.menino_negro-costas-perna-esquerda {
+  top: 21rem;
+  left: 46%;
+  transform: translateX(-50%) rotate(7deg);
+  width: 1.75rem;
+  height: 5.5rem;
+  z-index: 2;
+}
+
+/* Menino Asiático */
+
+/* Frente */ 
+
+.menino_asiatico-frente-cabeca {
+  top: 1.25rem;
+  left: 1%;
+  width: 5.75rem;
+  height: 4.5rem;
+  z-index: 999;
+}
+
+.menino_asiatico-frente-barriga {
+  top: 5.125rem;
+  left: 7%;
+  width: 2.25rem;
+  height: 4rem;
+  z-index: 5;
+}
+
+.menino_asiatico-frente-braco-direito {
+  top: 6rem;
+  left: 1%;
+  width: 1.5rem;
+  height: 4.5rem;
+  transform: rotate(7deg);
+  z-index: 1;
+}
+
+.menino_asiatico-frente-braco-esquerdo {
+  top: 5.75rem;
+  left: 16%;
+  width: 1.5rem;
+  height: 4.5rem;
+  transform: rotate(172deg);
+  z-index: 1;
+}
+
+.menino_asiatico-frente-perna-direita {
+  top: 8.5rem;
+  left: 5%;
+  width: 1.75rem;
+  height: 5.5rem;
+  transform: rotate(7deg);
+  z-index: 2;
+}
+
+.menino_asiatico-frente-perna-esquerda {
+  top: 8.5rem;
+  left: 12.5%;
+  width: 1.5rem;
+  height: 5.5rem;
+  transform: rotate(173deg);
+  z-index: 2;
+}
+
+/* Costas */
+
+.menino_asiatico-costas-cabeca {
+  top: 13.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4.5rem;
+  height: 4.5rem;
+  z-index: 999;
+}
+
+.menino_asiatico-costas-costas {
+  top: 17.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2.25rem;
+  height: 3.5rem;
+  z-index: 5;
+}
+
+.menino_asiatico-costas-braco-direito {
+  top: 18.375rem;
+  left: 57%;
+  transform: translateX(-50%) rotate(168deg);
+  width: 1.5rem;
+  height: 4.5rem;
+  z-index: 1;
+}
+
+.menino_asiatico-costas-braco-esquerdo {
+  top: 18.375rem;
+  left: 42%;
+  transform: translateX(-50%) rotate(190deg);
+  width: 1.5rem;
+  height: 4.5rem;
+  z-index: 1;
+}
+
+.menino_asiatico-costas-perna-direita {
+  top: 21rem;
+  left: 53%;
+  transform: translateX(-50%) rotate(172deg);
+  width: 1.75rem;
+  height: 5.5rem;
+  z-index: 2;
+}
+
+.menino_asiatico-costas-perna-esquerda {
+  top: 21rem;
+  left: 46%;
+  transform: translateX(-50%) rotate(7deg);
+  width: 1.75rem;
+  height: 5.5rem;
+  z-index: 2;
+}
+
+/* Menino Pardo */
+
+/* Frente */
+
+.menino_pardo-frente-cabeca {
+  top: 1.5rem;
+  left: 1%;
+  width: 5.75rem;
+  height: 4.5rem;
+  z-index: 999;
+}
+
+.menino_pardo-frente-barriga {
+  top: 5.125rem;
+  left: 7%;
+  width: 2.25rem;
+  height: 3.75rem;
+  z-index: 5;
+}
+
+.menino_pardo-frente-braco-direito {
+  top: 6rem;
+  left: 1%;
+  width: 1.5rem;
+  height: 4.5rem;
+  transform: rotate(7deg);
+  z-index: 1;
+}
+
+.menino_pardo-frente-braco-esquerdo {
+  top: 5.75rem;
+  left: 16%;
+  width: 1.5rem;
+  height: 4.5rem;
+  transform: rotate(172deg);
+  z-index: 1;
+}
+
+.menino_pardo-frente-perna-direita {
+  top: 8.5rem;
+  left: 5%;
+  width: 1.75rem;
+  height: 5.5rem;
+  transform: rotate(7deg);
+  z-index: 2;
+}
+
+.menino_pardo-frente-perna-esquerda {
+  top: 8.5rem;
+  left: 12.5%;
+  width: 1.5rem;
+  height: 5.5rem;
+  transform: rotate(173deg);
+  z-index: 2;
+}
+
+/* Costas */
+
+.menino_pardo-costas-cabeca {
+  top: 14rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4.5rem;
+  height: 4.5rem;
+  z-index: 999;
+}
+
+.menino_pardo-costas-costas {
+  top: 17.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2.25rem;
+  height: 3.5rem;
+  z-index: 5;
+}
+
+.menino_pardo-costas-braco-direito {
+  top: 18.375rem;
+  left: 57%;
+  transform: translateX(-50%) rotate(168deg);
+  width: 1rem;
+  height: 4.5rem;
+  z-index: 1;
+}
+
+.menino_pardo-costas-braco-esquerdo {
+  top: 18.375rem;
+  left: 42%;
+  transform: translateX(-50%) rotate(190deg);
+  width: 1.5rem;
+  height: 4.5rem;
+  z-index: 1;
+}
+
+.menino_pardo-costas-perna-direita {
+  top: 21rem;
+  left: 53%;
+  transform: translateX(-50%) rotate(172deg);
+  width: 1.75rem;
+  height: 5.5rem;
+  z-index: 2;
+}
+
+.menino_pardo-costas-perna-esquerda {
+  top: 21rem;
+  left: 46%;
+  transform: translateX(-50%) rotate(7deg);
+  width: 1.75rem;
+  height: 5.5rem;
+  z-index: 2;
+}
+
+/* Meninas */
+/* Menina Branca */
+.menina_branca-frente-cabeca {
+  top: 1.1rem;
+  left: 1%;
+  width: 5.75rem;
+  height: 4.5rem;
+  z-index: 999;
+}
+
+.menina_branca-frente-barriga {
+  top: 5.125rem;
+  left: 7%;
+  width: 2.25rem;
+  height: 3.75rem;
+  z-index: 5;
+}
+
+.menina_branca-frente-braco-direito {
+  top: 5.75rem;
+  left: 1%;
+  width: 1.5rem;
+  height: 4.5rem;
+  transform: rotate(7deg);
+  z-index: 1;
+}
+
+.menina_branca-frente-braco-esquerdo {
+  top: 5.75rem;
+  left: 16%;
+  width: 1.5rem;
+  height: 4.5rem;
+  transform: rotate(172deg);
+  z-index: 1;
+}
+
+.menina_branca-frente-perna-direita {
+  top: 8.5rem;
+  left: 5%;
+  width: 1.75rem;
+  height: 5.5rem;
+  transform: rotate(7deg);
+  z-index: 2;
+}
+
+.menina_branca-frente-perna-esquerda {
+  top: 8.5rem;
+  left: 12.5%;
+  width: 1.5rem;
+  height: 5.5rem;
+  transform: rotate(173deg);
+  z-index: 2;
+}
+
+/* Costas */
+
+.menina_branca-costas-cabeca {
+  top: 13.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+.menina_branca-costas-costas {
+  top: 17.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2.25rem;
+  height: 3.5rem;
+  z-index: 5;
+}
+
+.menina_branca-costas-braco-direito {
+  top: 18.375rem;
+  left: 58%;
+  transform: translateX(-50%) rotate(168deg);
+  width: 1.5rem;
+  height: 4.5rem;
+  z-index: 1;
+}
+
+.menina_branca-costas-braco-esquerdo {
+  top: 18.375rem;
+  left: 42%;
+  transform: translateX(-50%) rotate(190deg);
+  width: 1.5rem;
+  height: 4.5rem;
+  z-index: 1;
+}
+
+.menina_branca-costas-perna-direita {
+  top: 21rem;
+  left: 53%;
+  transform: translateX(-50%) rotate(172deg);
+  width: 1.75rem;
+  height: 5.5rem;
+  z-index: 2;
+}
+
+.menina_branca-costas-perna-esquerda {
+  top: 21rem;
+  left: 46%;
+  transform: translateX(-50%) rotate(7deg);
+  width: 1.75rem;
+  height: 5.5rem;
+  z-index: 2;
+}
+
+/* Menina Negra */
+
+/* Frente */
+
+.menina_negra-frente-cabeca {
+  top: 1.1rem;
+  left: 1%;
+  width: 5.75rem;
+  height: 4.5rem;
+  z-index: 999;
+}
+
+.menina_negra-frente-barriga {
+  top: 5.125rem;
+  left: 7%;
+  width: 2.25rem;
+  height: 3.75rem;
+  z-index: 5;
+}
+
+.menina_negra-frente-braco-direito {
+  top: 6rem;
+  left: 1%;
+  width: 1.5rem;
+  height: 4.5rem;
+  transform: rotate(7deg);
+  z-index: 1;
+}
+
+.menina_negra-frente-braco-esquerdo {
+  top: 5.75rem;
+  left: 16%;
+  width: 1rem;
+  height: 4.5rem;
+  transform: rotate(166deg);
+  z-index: 1;
+}
+
+.menina_negra-frente-perna-direita {
+  top: 8.5rem;
+  left: 6%;
+  width: 1.5rem;
+  height: 5.5rem;
+  transform: rotate(7deg);
+  z-index: 2;
+}
+
+.menina_negra-frente-perna-esquerda {
+  top: 8.5rem;
+  left: 12.5%;
+  width: 1.5rem;
+  height: 5.5rem;
+  transform: rotate(173deg);
+  z-index: 2;
+}
+
+/* Costas */
+
+.menina_negra-costas-cabeca {
+  top: 14rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4.5rem;
+  height: 4.5rem;
+  z-index: 999;
+}
+
+.menina_negra-costas-costas {
+  top: 17.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2.25rem;
+  height: 3.5rem;
+  z-index: 5;
+}
+
+.menina_negra-costas-braco-direito {
+  top: 18.375rem;
+  left: 56%;
+  transform: translateX(-50%) rotate(164deg);
+  width: 1rem;
+  height: 4.5rem;
+  z-index: 1;
+}
+
+.menina_negra-costas-braco-esquerdo {
+  top: 18.375rem;
+  left: 42%;
+  transform: translateX(-50%) rotate(190deg);
+  width: 1.5rem;
+  height: 4.5rem;
+  z-index: 1;
+}
+
+.menina_negra-costas-perna-direita {
+  top: 21rem;
+  left: 53%;
+  transform: translateX(-50%) rotate(172deg);
+  width: 1.75rem;
+  height: 5.5rem;
+  z-index: 2;
+}
+
+.menina_negra-costas-perna-esquerda {
+  top: 21rem;
+  left: 46%;
+  transform: translateX(-50%) rotate(7deg);
+  width: 1.25rem;
+  height: 5.5rem;
+  z-index: 2;
+}
+
+/* Menina Asiática */
+
+/* Frente */ 
+
+.menina_asiatica-frente-cabeca {
+  top: 1.25rem;
+  left: 1%;
+  width: 5.75rem;
+  height: 4.5rem;
+  z-index: 999;
+}
+
+.menina_asiatica-frente-barriga {
+  top: 5.125rem;
+  left: 7%;
+  width: 2.25rem;
+  height: 4rem;
+  z-index: 5;
+}
+
+.menina_asiatica-frente-braco-direito {
+  top: 6rem;
+  left: 1%;
+  width: 1.5rem;
+  height: 4.5rem;
+  transform: rotate(7deg);
+  z-index: 1;
+}
+
+.menina_asiatica-frente-braco-esquerdo {
+  top: 5.75rem;
+  left: 16%;
+  width: 1.5rem;
+  height: 4.5rem;
+  transform: rotate(172deg);
+  z-index: 1;
+}
+
+.menina_asiatica-frente-perna-direita {
+  top: 8.5rem;
+  left: 5%;
+  width: 1.75rem;
+  height: 5.5rem;
+  transform: rotate(7deg);
+  z-index: 2;
+}
+
+.menina_asiatica-frente-perna-esquerda {
+  top: 8.5rem;
+  left: 12.5%;
+  width: 1.5rem;
+  height: 5.5rem;
+  transform: rotate(173deg);
+  z-index: 2;
+}
+
+/* Costas */
+
+.menina_asiatica-costas-cabeca {
+  top: 13.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4.5rem;
+  height: 4.5rem;
+  z-index: 999;
+}
+
+.menina_asiatica-costas-costas {
+  top: 17.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2.25rem;
+  height: 3.5rem;
+  z-index: 5;
+}
+
+.menina_asiatica-costas-braco-direito {
+  top: 18.375rem;
+  left: 57%;
+  transform: translateX(-50%) rotate(168deg);
+  width: 1rem;
+  height: 4.5rem;
+  z-index: 1;
+}
+
+.menina_asiatica-costas-braco-esquerdo {
+  top: 18.375rem;
+  left: 42%;
+  transform: translateX(-50%) rotate(190deg);
+  width: 1.5rem;
+  height: 4.5rem;
+  z-index: 1;
+}
+
+.menina_asiatica-costas-perna-direita {
+  top: 21rem;
+  left: 53%;
+  transform: translateX(-50%) rotate(172deg);
+  width: 1.75rem;
+  height: 5.5rem;
+  z-index: 2;
+}
+
+.menina_asiatica-costas-perna-esquerda {
+  top: 21rem;
+  left: 48%;
+  transform: translateX(-50%) rotate(1deg);
+  width: 1.25rem;
+  height: 5.5rem;
+  z-index: 2;
+}
+
+/* Menina Parda */
+
+/* Frente */
+
+.menina_parda-frente-cabeca {
+  top: 1.5rem;
+  left: 1%;
+  width: 5.75rem;
+  height: 4.5rem;
+  z-index: 999;
+}
+
+.menina_parda-frente-barriga {
+  top: 5.125rem;
+  left: 7%;
+  width: 2.25rem;
+  height: 3.75rem;
+  z-index: 5;
+}
+
+.menina_parda-frente-braco-direito {
+  top: 6rem;
+  left: 1%;
+  width: 1.5rem;
+  height: 4.5rem;
+  transform: rotate(7deg);
+  z-index: 1;
+}
+
+.menina_parda-frente-braco-esquerdo {
+  top: 5.85rem;
+  left: 16%;
+  width: 1rem;
+  height: 4.5rem;
+  transform: rotate(164deg);
+  z-index: 1;
+}
+
+.menina_parda-frente-perna-direita {
+  top: 8.5rem;
+  left: 7%;
+  width: 1.25rem;
+  height: 5.5rem;
+  transform: rotate(7deg);
+  z-index: 2;
+}
+
+.menina_parda-frente-perna-esquerda {
+  top: 8.5rem;
+  left: 12%;
+  width: 1.5rem;
+  height: 5.5rem;
+  transform: rotate(173deg);
+  z-index: 2;
+}
+
+/* Costas */
+
+.menina_parda-costas-cabeca {
+  top: 14rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5rem;
+  height: 5rem;
+  z-index: 999;
+}
+
+.menina_parda-costas-costas {
+  top: 18.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2.25rem;
+  height: 3.5rem;
+  z-index: 5;
+}
+
+.menina_parda-costas-braco-direito {
+  top: 18.375rem;
+  left: 57%;
+  transform: translateX(-50%) rotate(168deg);
+  width: 1rem;
+  height: 4.5rem;
+  z-index: 1;
+}
+
+.menina_parda-costas-braco-esquerdo {
+  top: 18.375rem;
+  left: 43%;
+  transform: translateX(-50%) rotate(190deg);
+  width: 1.5rem;
+  height: 4.5rem;
+  z-index: 1;
+}
+
+.menina_parda-costas-perna-direita {
+  top: 21rem;
+  left: 53%;
+  transform: translateX(-50%) rotate(172deg);
+  width: 1.75rem;
+  height: 5.5rem;
+  z-index: 2;
+}
+
+.menina_parda-costas-perna-esquerda {
+  top: 21rem;
+  left: 48%;
+  transform: translateX(-50%) rotate(7deg);
+  width: 1.5rem;
+  height: 5.5rem;
+  z-index: 2;
   }
 }

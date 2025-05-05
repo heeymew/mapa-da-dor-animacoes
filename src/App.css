@@ -1,4 +1,5 @@
 /* Reset CSS */
+/* Reset CSS */
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +12,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f0f0f0;
+  background-color: 
+#f0f0f0;
   font-family: Arial, sans-serif;
   overflow: hidden;
 }
@@ -73,8 +75,152 @@ body {
   text-align: center;
 }
 
-@media (min-width: 401px) {
-  .titulo {
-    font-size: 3rem;
-  }
+.confirmar-btn.mobile {
+  position: fixed !important;
+  bottom: 0 !important;
+  left: auto;
+  right: 0 !important;
+  padding: 1rem !important;
+  z-index: 101 !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+.confirmar-btn.mobile img {
+  width: 5rem !important;
+  height: auto !important;
+}
+
+.logo-container {
+  position: absolute !important;
+  top: 20px !important;
+  z-index: 100 !important;
+}
+
+.logo-direita {
+  right: 20px !important;
+  left: auto !important;
+}
+
+.logo-esquerda {
+  left: 20px !important;
+  right: auto !important;
+}
+
+.logo-mobile {
+  position: static;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.logo-mobile .logo {
+  position: unset !important;
+  width: 100px !important;
+  margin: 0 auto;
+}
+
+.voltar-btn {
+  background: url('../assets/imagens/voltar-btn.png') no-repeat center;
+  background-size: contain;
+  width: 7rem;
+  height: 7rem;
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+button.botao-imagem.confirmar-btn.confirmar-btn-direita {
+  position: fixed;
+  left: 80%;
+  bottom: 3.5%;
+}
+
+button.botao-imagem.confirmar-btn {
+  position: fixed;
+  bottom: 3.5%;
+  left: 80%;
+}
+
+/* Responsividade */
+@media (min-width: 251px) and (max-width: 767px) {
+.titulo {
+  font-size: 1rem;
+} 
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.confirmar-btn-direita {
+  position: relative !important;
+  align-self: flex-end;
+  bottom: 2rem;
+  width: 120px;
+  background: transparent;
+  border: none;
+  z-index: 10;
+}
+
+.confirmar-btn-direita img {
+  width: 8rem !important;
+  height: auto !important;
+  margin-bottom: -2px !important;
+}
+
+button.botao-confirmar-mobile {
+  position: fixed;
+  bottom: 4.8%;
+  left: 60%;
+  width: 120px;
+}
+
+.animacoes-container {
+  padding-bottom: calc(4rem + env(safe-area-inset-bottom, 0));
+}
+
+.animacoes-grid {
+  margin-bottom: 4rem;
+}
+
+.animacao-card {
+  max-height: 250px;
+}
+
+.animacao-preview {
+  height: 120px;
+}
+
+button.botao-imagem.confirmar-btn.botao-confirmar-fix {
+  left: 60%;
+  bottom: 4.8%;
+}
+
+button.botao-imagem.confirmar-btn.botao-confirmar-fix img {
+  width: 120px;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+.botao-imagem img {
+  width: 120px;
+}
+
+.botao-finalizar img {
+  width: 125px;
+}
+
+.icone-remover {
+  width: 20px;
+}
 }
