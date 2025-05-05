@@ -1,3 +1,10 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+}
+
 .animacoes-container {
     max-width: 1000px;
     margin: 0 auto;
@@ -5,7 +12,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
+    height: auto;
 }
   
 .animacoes-header {
@@ -25,6 +32,9 @@
     gap: 2rem;
     width: 100%;
     max-width: 800px;
+    max-height: calc(100vh - 200px);
+    overflow-y: auto; 
+    padding-right: 10px;
 }
   
 .animacao-card {
@@ -37,6 +47,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 320px;
 }
   
 .animacao-card:hover {
@@ -44,6 +55,15 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
   
+.animacao-midia {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
 .animacao-preview {
     width: 100%;
     height: 220px;
@@ -66,6 +86,12 @@
     font-size: 1.25rem;
     font-weight: bold;
     color: #333;
+}
+
+.animacao-preview video {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
   
 .sem-animacoes {
@@ -118,7 +144,7 @@
 .animacoes-grid {
     grid-template-columns: 1fr;
 }
-  
+
 .animacoes-container {
     max-width: 1000px;
     margin: 0 auto;
@@ -139,15 +165,15 @@
 }
 
 .animacao-preview {
-    height: 180px;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .animacoes-container {
     padding: 1rem;
-}
-
-.animacoes-header h2 {
-    font-size: 1.5rem;
 }
 
 .animacao-nome {
@@ -156,10 +182,10 @@
 
 .botao-voltar-animacoes-fix,
 .botao-confirmar-fix {
-  display: flex;
-  align-self: flex-end;
-  left: 3rem
-  ;
-  z-index: 1000;
+    display: flex;
+    align-self: flex-end;
+    left: 3rem
+    ;
+    z-index: 1000;
 }
 }
