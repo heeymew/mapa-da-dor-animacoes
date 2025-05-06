@@ -140,6 +140,13 @@ html, body {
   z-index: 1000;
 }
 
+.animacao-card.selecionado {
+    border-color: #3488f5;
+    background-color: #e2e7f1;
+    box-shadow: 0 0 8px rgba(77, 104, 255, 0.6);
+    transform: scale(1.05);
+}
+
 @media (min-width: 251px) and (max-width: 767px) {
 .animacoes-grid {
     grid-template-columns: 1fr;
@@ -153,6 +160,13 @@ html, body {
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
+}
+
+.animacao-card.selecionado {
+    border-color: #3488f5;
+    background-color: #e2e7f1;
+    box-shadow: 0 0 8px rgba(77, 104, 255, 0.6);
+    transform: scale(1.05);
 }
 
 .animacoes-header {
