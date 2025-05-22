@@ -29,30 +29,53 @@
   color: #0056b3;
 }
 
-.botoes-container {
+.sintomas-por-intensidade {
+  margin-bottom: 20px;
+}
+
+.lista-intensidade {
+  margin-top: 10px;
+}
+
+.item-intensidade {
   display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 30px;
+  align-items: center;
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.botao-imagem {
-  background: none;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.2s;
-  padding: 0;
+.info-intensidade {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
-.botao-imagem:hover {
-  transform: scale(1.1);
+.descricao-intensidade {
+  font-size: 0.9em;
+  color: #666;
+  font-style: italic;
 }
 
-.botao-imagem img {
-  width: 100px;
-  height: auto;
+.areas-sintomas {
+  margin-bottom: 20px;
 }
-  
+
+.area-grupo {
+  margin-bottom: 14px;
+}
+
+.titulo-area {
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  color: #0056b3;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
 .sintoma-lista {
   margin-top: 10px;
 }
@@ -60,6 +83,14 @@
 .sintoma-item {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 8px 15px !important;
+  margin-bottom: 5px !important;
+}
+
+.sintoma-item-revisao {
+  display: flex;
+  justify-content: flex-start;
   align-items: center;
   padding: 8px 15px !important;
   margin-bottom: 5px !important;
@@ -94,6 +125,7 @@
   margin-top: 30px;
 }
 
+
 .botao-imagem {
   background: none;
   border: none;
@@ -111,17 +143,36 @@
   height: auto;
 }
 
+.botao-editar img {
+  width: 120px;
+  height: auto;
+}
+
 .botao-finalizar img {
   width: 130px;
+  height: auto;
+}
+
+.botao-voltar-menor img {
+  width: 110px;
+  height: auto;
 }
 
 @media (min-width: 251px) and (max-width: 767px) {
-.botao-imagem img {
+  .botao-imagem img {
     width: 100px;
     height: auto;
-}
+  }
   
-.botao-finalizar img {
-    width: 115px;
+  .botao-finalizar img {
+    width: 120px;
+  }
+  
+  .botao-editar img {
+    width: 105px;
+  }
+  
+  .botao-voltar-menor img {
+    width: 100px;
   }
 }

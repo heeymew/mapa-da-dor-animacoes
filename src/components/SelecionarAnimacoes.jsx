@@ -3,8 +3,22 @@ import '../components/SelecionarAnimacoes.css';
 import confirmarAreaBtn from '../assets/imagens/finalizar-btn.png';
 import voltarBtn from '../assets/imagens/voltar-btn.png';
 
-const SelecionarAnimacoes = ({ areaSelecionada, sexoSelecionado, onConfirmar, onVoltar }) => {
-  const [sintomasSelecionados, setSintomasSelecionados] = useState([]);
+const SelecionarAnimacoes = ({ areaSelecionada, sexoSelecionado, onConfirmar, onVoltar, sintomasExistentes = {} }) => {
+  const mapearAreaParaCategoria = (area) => {
+    if (area.includes('cabeca')) return 'cabeca';
+    if (area.includes('barriga')) return 'barriga';
+    if (area.includes('costas') && !area.includes('braco') && !area.includes('perna')) return 'costas';
+    if (area.includes('braco')) return 'braco';
+    if (area.includes('perna')) return 'perna';
+    return area;
+  };
+
+  const categoriaArea = mapearAreaParaCategoria(areaSelecionada);
+  
+  const [sintomasSelecionados, setSintomasSelecionados] = useState(
+    sintomasExistentes[categoriaArea] || []
+  );
+  
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -20,19 +34,9 @@ const SelecionarAnimacoes = ({ areaSelecionada, sexoSelecionado, onConfirmar, on
     };
   }, []);
 
-  const mapearAreaParaCategoria = (area) => {
-    if (area.includes('cabeca')) return 'cabeca';
-    if (area.includes('barriga')) return 'barriga';
-    if (area.includes('costas') && !area.includes('braco') && !area.includes('perna')) return 'costas';
-    if (area.includes('braco')) return 'braco';
-    if (area.includes('perna')) return 'perna';
-    return area;
-  };
-
   const mapearSexoParaCategoria = (sexo) => (sexo === 'masculino' ? 'menino' : 'menina');
 
   const categoriaSexo = mapearSexoParaCategoria(sexoSelecionado);
-  const categoriaArea = mapearAreaParaCategoria(areaSelecionada);
 
   const getImagePath = (path) => {
     const baseUrl = import.meta.env.BASE_URL || '/';

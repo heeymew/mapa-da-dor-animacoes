@@ -145,6 +145,10 @@ button.botao-imagem.confirmar-btn {
   left: 80%;
 }
 
+button.botao-imagem.confirmar-btn img {
+  width: 150px;
+}
+
 /* Responsividade */
 @media (min-width: 251px) and (max-width: 767px) {
 .titulo {

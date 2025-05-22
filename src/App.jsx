@@ -4,6 +4,8 @@ import PersonagemSelector from "./components/PersonagemSelector";
 import DoresSelector from "./components/DoresSelector";
 import SelecionarAnimacoes from "./components/SelecionarAnimacoes";
 import ConfirmarEditarSintomas from "./components/ConfirmarEditarSintomas";
+import SintomasMaisFortes from "./components/SintomasMaisFortes";
+import Finalizar from "./components/Finalizar";
 import voltarBtn from "./assets/imagens/voltar-btn.png";
 import "./styles/voltarBtn.css"
 import confirmarSintomasBtn from "./assets/imagens/finalizar-btn.png";
@@ -15,6 +17,9 @@ function App() {
   const [areaDorSelecionada, setAreaDorSelecionada] = useState(null);
   const [sintomasConfirmados, setSintomasConfirmados] = useState({});
   const [mostrarConfirmarSintomas, setMostrarConfirmarSintomas] = useState(false);
+  const [mostrarSintomasMaisFortes, setMostrarSintomasMaisFortes] = useState(false);
+  const [mostrarFinalizar, setMostrarFinalizar] = useState(false);
+  const [sintomasIntensidade, setSintomasIntensidade] = useState({});
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -35,7 +40,12 @@ function App() {
   const handleAreaDorSelect = (area) => setAreaDorSelecionada(area);
 
   const handleVoltar = () => {
-    if (mostrarConfirmarSintomas) {
+    if (mostrarFinalizar) {
+      resetarApp();
+    } else if (mostrarSintomasMaisFortes) {
+      setMostrarSintomasMaisFortes(false);
+      setMostrarConfirmarSintomas(true);
+    } else if (mostrarConfirmarSintomas) {
       setMostrarConfirmarSintomas(false);
     } else if (areaDorSelecionada) {
       setAreaDorSelecionada(null);
@@ -44,6 +54,17 @@ function App() {
     } else {
       setSexoEscolhido(null);
     }
+  };
+
+  const resetarApp = () => {
+    setSexoEscolhido(null);
+    setPersonagemEscolhido(null);
+    setAreaDorSelecionada(null);
+    setSintomasConfirmados({});
+    setSintomasIntensidade({});
+    setMostrarConfirmarSintomas(false);
+    setMostrarSintomasMaisFortes(false);
+    setMostrarFinalizar(false);
   };
 
   const adicionarSintomas = (area, sintomas) => {
@@ -58,7 +79,31 @@ function App() {
     }
   };
 
+  const handleFinalizarSintomas = () => {
+    setMostrarConfirmarSintomas(false);
+    setMostrarSintomasMaisFortes(true);
+  };
+
+  const handleSintomasIntensidade = (intensidades) => {
+    setSintomasIntensidade(intensidades);
+    setMostrarSintomasMaisFortes(false);
+    setMostrarFinalizar(true);
+  };
+
+  const handleFinalizarConsulta = () => {
+    alert("Seus sintomas foram enviados!");
+    setSexoEscolhido(null);
+    setPersonagemEscolhido(null);
+    setAreaDorSelecionada(null);
+    setSintomasConfirmados({});
+    setSintomasIntensidade({});
+    setMostrarConfirmarSintomas(false);
+    setMostrarSintomasMaisFortes(false);
+  };
+
   const getBotaoVoltarClassName = () => {
+    if (mostrarFinalizar) return "botao-voltar na-finalizacao";
+    if (mostrarSintomasMaisFortes) return "botao-voltar na-sintomas-intensidade";
     if (mostrarConfirmarSintomas) return "botao-voltar na-confirmacao";
     if (areaDorSelecionada) {
       return isMobile ? "botao-voltar na-selecao-animacoes botao-voltar-animacoes-fix" : "botao-voltar na-selecao-animacoes";
@@ -68,13 +113,14 @@ function App() {
     return "botao-voltar";
   };
 
-  const mostrarBotaoVoltar = sexoEscolhido !== null && !mostrarConfirmarSintomas;
+  // Modificado para não mostrar o botão voltar nas páginas de ConfirmarEditarSintomas e SintomasMaisFortes
+  const mostrarBotaoVoltar = sexoEscolhido !== null && !mostrarConfirmarSintomas && !mostrarSintomasMaisFortes && !mostrarFinalizar;
   
   const deveMostrarBotaoConfirmar = 
-    personagemEscolhido && !areaDorSelecionada && !mostrarConfirmarSintomas && 
+    personagemEscolhido && !areaDorSelecionada && !mostrarConfirmarSintomas && !mostrarSintomasMaisFortes && !mostrarFinalizar && 
     Object.keys(sintomasConfirmados).length > 0;
 
-  const TelaDoresSelector = personagemEscolhido && !areaDorSelecionada && !mostrarConfirmarSintomas;
+  const TelaDoresSelector = personagemEscolhido && !areaDorSelecionada && !mostrarConfirmarSintomas && !mostrarSintomasMaisFortes && !mostrarFinalizar;
 
   const logoStyle = isMobile
     ? { className: "logo-mobile" }
@@ -113,7 +159,7 @@ function App() {
         </>
       )}
 
-      {personagemEscolhido && !areaDorSelecionada && !mostrarConfirmarSintomas && (
+      {personagemEscolhido && !areaDorSelecionada && !mostrarConfirmarSintomas && !mostrarSintomasMaisFortes && !mostrarFinalizar && (
         <>
           <DoresSelector personagem={personagemEscolhido} onAreaSelect={handleAreaDorSelect} />
           {deveMostrarBotaoConfirmar && (
@@ -126,26 +172,36 @@ function App() {
 
       {areaDorSelecionada && (
         <SelecionarAnimacoes
-        areaSelecionada={areaDorSelecionada}
-        sexoSelecionado={sexoEscolhido}
-        onConfirmar={adicionarSintomas}
-        onVoltar={handleVoltar}
-      />
+          areaSelecionada={areaDorSelecionada}
+          sexoSelecionado={sexoEscolhido}
+          onConfirmar={adicionarSintomas}
+          onVoltar={handleVoltar}
+          sintomasExistentes={sintomasConfirmados}
+        />
       )}
 
       {mostrarConfirmarSintomas && (
         <ConfirmarEditarSintomas
           sintomas={sintomasConfirmados}
+          sintomasIntensidade={sintomasIntensidade}
           onAtualizar={setSintomasConfirmados}
-          onVoltar={() => setMostrarConfirmarSintomas(false)}
-          onFinalizar={() => {
-            alert("Seus sintomas foram enviados!");
-            setSexoEscolhido(null);
-            setPersonagemEscolhido(null);
-            setAreaDorSelecionada(null);
-            setSintomasConfirmados({});
-            setMostrarConfirmarSintomas(false);
-          }}
+          onVoltar={handleVoltar}
+          onFinalizar={handleFinalizarSintomas}
+          mostrarBotaoVoltar={false}
+        />
+      )}
+
+      {mostrarSintomasMaisFortes && (
+        <SintomasMaisFortes
+          sintomas={sintomasConfirmados}
+          onVoltar={handleVoltar}
+          onAvancar={handleSintomasIntensidade}
+          mostrarBotaoVoltar={false}
+        />
+      )}
+      {mostrarFinalizar && (
+        <Finalizar 
+          onNovaConsulta={resetarApp}
         />
       )}
     </div>

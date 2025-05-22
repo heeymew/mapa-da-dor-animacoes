@@ -113,7 +113,7 @@ html, body {
     z-index: 1000;
     pointer-events: none;
 }
-  
+
 .botao-voltar-mobile,
 .botao-confirmar-mobile {
     all: unset;
@@ -198,8 +198,7 @@ html, body {
 .botao-confirmar-fix {
     display: flex;
     align-self: flex-end;
-    left: 3rem
-    ;
+    left: 3rem;
     z-index: 1000;
 }
 }
