@@ -137,10 +137,6 @@
   height: 20px;
 }
 
-.botao-finalizar img {
-  width: 135px;
-}
-
 /* Mobile */
 @media (min-width: 251px) and (max-width: 767px) {
   .sintomas-mais-fortes-container {
