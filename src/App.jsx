@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import PaginaLogin from "./components/PaginaLogin";
 import SexoSelector from "./components/SexoSelector";
 import PersonagemSelector from "./components/PersonagemSelector";
 import DoresSelector from "./components/DoresSelector";
@@ -12,6 +13,7 @@ import confirmarSintomasBtn from "./assets/imagens/finalizar-btn.png";
 import logo from "./assets/imagens/logo.png";
 
 function App() {
+  const [usuarioLogado, setUsuarioLogado] = useState(false);
   const [sexoEscolhido, setSexoEscolhido] = useState(null);
   const [personagemEscolhido, setPersonagemEscolhido] = useState(null);
   const [areaDorSelecionada, setAreaDorSelecionada] = useState(null);
@@ -22,16 +24,9 @@ function App() {
   const [sintomasIntensidade, setSintomasIntensidade] = useState({});
   const [isMobile, setIsMobile] = useState(false);
 
-  const getCurrentPageClass = () => {
-    if (mostrarFinalizar) return 'finalizar-body';
-    if (mostrarSintomasMaisFortes) return 'sintomas-mais-fortes-body';
-    if (mostrarConfirmarSintomas) return 'confirmar-editar-sintomas-body';
-    if (areaDorSelecionada) return 'selecionar-animacoes-body';
-    if (personagemEscolhido && !areaDorSelecionada) return 'dores-selector-body';
-    if (sexoEscolhido && !personagemEscolhido) return 'personagem-selector-body';
-    if (!sexoEscolhido) return 'sexo-selector-body';
-    return 'default-body';
-  };
+  useEffect(() => {
+    console.log('Estado usuarioLogado mudou para:', usuarioLogado);
+  }, [usuarioLogado]);
 
   useEffect(() => {
     const currentClass = getCurrentPageClass();
@@ -71,7 +66,34 @@ function App() {
     };
   }, []);
 
-  const handleSexoSelect = (sexo) => setSexoEscolhido(sexo);
+  const handleLoginSucesso = () => {
+    console.log('handleLoginSucesso chamado no App - Estado atual:', usuarioLogado);
+    setUsuarioLogado(true);
+    console.log('handleLoginSucesso executado - usuarioLogado deve ser true');
+  };
+
+  const handleVoltarLogin = () => {
+    console.log('Voltando para login');
+    setUsuarioLogado(false);
+    resetarApp();
+  };
+
+  const getCurrentPageClass = () => {
+    if (mostrarFinalizar) return 'finalizar-body';
+    if (mostrarSintomasMaisFortes) return 'sintomas-mais-fortes-body';
+    if (mostrarConfirmarSintomas) return 'confirmar-editar-sintomas-body';
+    if (areaDorSelecionada) return 'selecionar-animacoes-body';
+    if (personagemEscolhido && !areaDorSelecionada) return 'dores-selector-body';
+    if (sexoEscolhido && !personagemEscolhido) return 'personagem-selector-body';
+    if (!sexoEscolhido) return 'sexo-selector-body';
+    return 'default-body';
+  };
+
+  const handleSexoSelect = (sexo) => {
+    console.log('Sexo selecionado:', sexo);
+    setSexoEscolhido(sexo);
+  };
+  
   const handlePersonagemSelect = (personagem) => setPersonagemEscolhido(personagem);
   const handleAreaDorSelect = (area) => setAreaDorSelecionada(area);
 
@@ -149,6 +171,13 @@ function App() {
     return "botao-voltar";
   };
 
+  if (!usuarioLogado) {
+    console.log('Renderizando PaginaLogin - usuarioLogado:', usuarioLogado);
+    return <PaginaLogin onLoginSucesso={handleLoginSucesso} logo={logo} />;
+  }
+
+  console.log('Renderizando aplicação principal - usuarioLogado:', usuarioLogado);
+
   const mostrarBotaoVoltar = sexoEscolhido !== null && !mostrarConfirmarSintomas && !mostrarSintomasMaisFortes && !mostrarFinalizar;
   
   const deveMostrarBotaoConfirmar = 
@@ -170,9 +199,11 @@ function App() {
 
   return (
     <div className="app-container">
-      <div className="logo-container" {...logoStyle}>
-        <img src={logo} alt="Logo" className="logo" />
-      </div>
+      {!mostrarFinalizar && (
+        <div className="logo-container" {...logoStyle}>
+          <img src={logo} alt="Logo" className="logo" />
+        </div>
+      )}
 
       {mostrarBotaoVoltar && (
         <button onClick={handleVoltar} className={getBotaoVoltarClassName()}>
@@ -236,9 +267,11 @@ function App() {
           sexoSelecionado={sexoEscolhido}
         />
       )}
+      
       {mostrarFinalizar && (
         <Finalizar 
           onNovaConsulta={resetarApp}
+          onVoltarLogin={handleVoltarLogin}
         />
       )}
     </div>
