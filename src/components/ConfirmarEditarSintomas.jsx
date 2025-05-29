@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import editarIcon from "../assets/imagens/editar-btn.png";
+import ConcluirIcon from "../assets/imagens/concluir-btn.png";
 import finalizarIcon from "../assets/imagens/finalizar-btn.png";
 import RemoverIcon from "../assets/imagens/remover-btn.png";
 import voltarBtn from "../assets/imagens/voltar-btn.png";
@@ -196,8 +197,8 @@ const ConfirmarEditarSintomas = ({ sintomas, sintomasIntensidade, onAtualizar, o
 
       <div className="botoes-container">
         {modoEdicao ? (
-          <button onClick={() => setModoEdicao(false)} className="botao-imagem botao-editar">
-            <img src={editarIcon} alt="Concluir Edição" />
+          <button onClick={() => setModoEdicao(false)} className="botao-imagem botao-concluir">
+            <img src={ConcluirIcon} alt="Concluir Edição" />
           </button>
         ) : (
           <>

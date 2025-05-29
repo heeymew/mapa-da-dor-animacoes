@@ -215,6 +215,11 @@
   width: 150px;
 }
 
+.botao-concluir img {
+  width: 150px;
+  height: auto;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
   .confirmar-editar-container {
@@ -279,6 +284,10 @@
   
   .botao-editar img {
     width: 90px;
+  }
+
+  .botao-concluir img {
+    width: 120px;
   }
   
   .botao-voltar-menor img {
