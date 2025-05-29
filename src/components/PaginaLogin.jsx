@@ -112,7 +112,6 @@ export default function PaginaLogin({ onLoginSucesso, logo }) {
   return (
     <div className="login-container">
       <div className="login-card">
-        {/* Container da Logo - Seção Separada */}
         <div className="logo-section">
           {logo && !logoError ? (
             <img 
@@ -130,10 +129,9 @@ export default function PaginaLogin({ onLoginSucesso, logo }) {
           )}
         </div>
 
-        {/* Container do Formulário - Seção Separada */}
         <div className="form-section">
           <div className="form-container">
-            <div className="input-group">
+            <div className={`input-group ${(errors.usuario || loginError) ? 'has-error' : ''}`}>
               <label className="input-label">
                 Usuário
               </label>
@@ -153,7 +151,7 @@ export default function PaginaLogin({ onLoginSucesso, logo }) {
               )}
             </div>
 
-            <div className="input-group">
+            <div className={`input-group ${(errors.senha || loginError) ? 'has-error' : ''}`}>
               <label className="input-label">
                 Senha
               </label>

@@ -121,12 +121,6 @@
   cursor: pointer;
 }
 
-.sintoma-card.editavel:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  border-color: #007bff;
-}
-
 .sintoma-preview {
   width: 120px;
   height: 120px;

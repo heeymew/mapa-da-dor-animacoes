@@ -82,6 +82,12 @@
   font-weight: 500;
   margin-bottom: 0.5rem;
   color: #4B5768;
+  transition: color 0.2s ease-in-out;
+}
+
+/* Label com erro - aplicado quando o input-group tem a classe has-error */
+.input-group.has-error .input-label {
+  color: #991B1B;
 }
 
 .input-field {
