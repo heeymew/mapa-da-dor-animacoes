@@ -9,7 +9,7 @@ import SintomasMaisFortes from "./components/SintomasMaisFortes";
 import Finalizar from "./components/Finalizar";
 import voltarBtn from "./assets/imagens/voltar-btn.png";
 import "./styles/voltarBtn.css"
-import confirmarSintomasBtn from "./assets/imagens/finalizar-btn.png";
+import concluirBtn from "./assets/imagens/concluir-btn.png";
 import logo from "./assets/imagens/logo.png";
 
 function App() {
@@ -180,7 +180,7 @@ function App() {
 
   const mostrarBotaoVoltar = sexoEscolhido !== null && !mostrarConfirmarSintomas && !mostrarSintomasMaisFortes && !mostrarFinalizar;
   
-  const deveMostrarBotaoConfirmar = 
+  const deveMostrarBotaoConcluir = 
     personagemEscolhido && !areaDorSelecionada && !mostrarConfirmarSintomas && !mostrarSintomasMaisFortes && !mostrarFinalizar && 
     Object.keys(sintomasConfirmados).length > 0;
 
@@ -228,9 +228,9 @@ function App() {
       {personagemEscolhido && !areaDorSelecionada && !mostrarConfirmarSintomas && !mostrarSintomasMaisFortes && !mostrarFinalizar && (
         <>
           <DoresSelector personagem={personagemEscolhido} onAreaSelect={handleAreaDorSelect} />
-          {deveMostrarBotaoConfirmar && (
-          <button onClick={() => setMostrarConfirmarSintomas(true)} className={`botao-imagem confirmar-btn ${isMobile ? 'botao-confirmar-fix' : 'confirmar-btn-direita'}`}>
-              <img src={confirmarSintomasBtn} alt="Confirmar Sintomas" />
+          {deveMostrarBotaoConcluir && (
+          <button onClick={() => setMostrarConfirmarSintomas(true)} className={`botao-imagem concluir-btn ${isMobile ? 'botao-concluir-fix' : 'concluir-btn-direita'}`}>
+              <img src={concluirBtn} alt="Concluir Sintomas" />
           </button>
           )}
         </>

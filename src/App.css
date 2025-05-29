@@ -201,12 +201,13 @@ button.botao-confirmar-mobile {
   height: 120px;
 }
 
-button.botao-imagem.confirmar-btn.botao-confirmar-fix {
+button.botao-imagem.concluir-btn.botao-concluir-fix {
+  position: fixed;
   left: 60%;
-  bottom: 22px;
+  bottom: 20px;
 }
 
-button.botao-imagem.confirmar-btn.botao-confirmar-fix img {
+button.botao-imagem.concluir-btn.botao-concluir-fix img {
   width: 120px;
 }
 
