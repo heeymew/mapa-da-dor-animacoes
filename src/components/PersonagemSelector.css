@@ -34,6 +34,7 @@
 .personagem-container {
     border: none;
     display: flex;
+    margin-top: 0.625rem;
     justify-content: center;
     gap: 3rem;
     padding: 2rem;
