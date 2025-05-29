@@ -1,0 +1,7 @@
+Nível de água alterado para 30 cm.
+Comporta levantada devido ao nível crítico de água.
+Nível de água alterado para 100 cm.
+Comporta abaixada. Nível de água seguro.
+Nível de água alterado para 50 cm.
+Comporta levantada devido ao nível crítico de água.
+Nível de água alterado para 50 cm.

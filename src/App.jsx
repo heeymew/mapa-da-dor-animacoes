@@ -22,6 +22,42 @@ function App() {
   const [sintomasIntensidade, setSintomasIntensidade] = useState({});
   const [isMobile, setIsMobile] = useState(false);
 
+  const getCurrentPageClass = () => {
+    if (mostrarFinalizar) return 'finalizar-body';
+    if (mostrarSintomasMaisFortes) return 'sintomas-mais-fortes-body';
+    if (mostrarConfirmarSintomas) return 'confirmar-editar-sintomas-body';
+    if (areaDorSelecionada) return 'selecionar-animacoes-body';
+    if (personagemEscolhido && !areaDorSelecionada) return 'dores-selector-body';
+    if (sexoEscolhido && !personagemEscolhido) return 'personagem-selector-body';
+    if (!sexoEscolhido) return 'sexo-selector-body';
+    return 'default-body';
+  };
+
+  useEffect(() => {
+    const currentClass = getCurrentPageClass();
+
+    const bodyClassesToRemove = [
+      'sexo-selector-body',
+      'personagem-selector-body',
+      'dores-selector-body',
+      'selecionar-animacoes-body',
+      'confirmar-editar-sintomas-body',
+      'sintomas-mais-fortes-body',
+      'finalizar-body',
+      'default-body'
+    ];
+    
+    bodyClassesToRemove.forEach(className => {
+      document.body.classList.remove(className);
+    });
+    
+    document.body.classList.add(currentClass);
+    
+    return () => {
+      document.body.classList.remove(currentClass);
+    };
+  }, [sexoEscolhido, personagemEscolhido, areaDorSelecionada, mostrarConfirmarSintomas, mostrarSintomasMaisFortes, mostrarFinalizar]);
+
   useEffect(() => {
     const checkIfMobile = () => {
       setIsMobile(window.innerWidth >= 251 && window.innerWidth <= 767);
@@ -113,7 +149,6 @@ function App() {
     return "botao-voltar";
   };
 
-  // Modificado para não mostrar o botão voltar nas páginas de ConfirmarEditarSintomas e SintomasMaisFortes
   const mostrarBotaoVoltar = sexoEscolhido !== null && !mostrarConfirmarSintomas && !mostrarSintomasMaisFortes && !mostrarFinalizar;
   
   const deveMostrarBotaoConfirmar = 
@@ -188,6 +223,7 @@ function App() {
           onVoltar={handleVoltar}
           onFinalizar={handleFinalizarSintomas}
           mostrarBotaoVoltar={false}
+          sexoSelecionado={sexoEscolhido}
         />
       )}
 
@@ -197,6 +233,7 @@ function App() {
           onVoltar={handleVoltar}
           onAvancar={handleSintomasIntensidade}
           mostrarBotaoVoltar={false}
+          sexoSelecionado={sexoEscolhido}
         />
       )}
       {mostrarFinalizar && (
