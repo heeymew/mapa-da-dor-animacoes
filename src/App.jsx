@@ -10,6 +10,7 @@ import Finalizar from "./components/Finalizar";
 import voltarBtn from "./assets/imagens/voltar-btn.png";
 import "./styles/voltarBtn.css"
 import concluirBtn from "./assets/imagens/concluir-btn.png";
+import finalizarBtn from "./assets/imagens/finalizar-btn.png";
 import logo from "./assets/imagens/logo.png";
 
 function App() {
@@ -137,11 +138,19 @@ function App() {
     }
   };
 
+  // ✅ Função corrigida para ir para a tela de sintomas mais fortes
   const handleFinalizarSintomas = () => {
     setMostrarConfirmarSintomas(false);
     setMostrarSintomasMaisFortes(true);
   };
 
+  // ✅ Função corrigida - removida a referência à variável inexistente
+  const handleConcluirSintomas = () => {
+    setMostrarSintomasMaisFortes(false);
+    setMostrarFinalizar(true);
+  };
+
+  // ✅ Função para receber as intensidades dos sintomas
   const handleSintomasIntensidade = (intensidades) => {
     setSintomasIntensidade(intensidades);
     setMostrarSintomasMaisFortes(false);
@@ -150,13 +159,7 @@ function App() {
 
   const handleFinalizarConsulta = () => {
     alert("Seus sintomas foram enviados!");
-    setSexoEscolhido(null);
-    setPersonagemEscolhido(null);
-    setAreaDorSelecionada(null);
-    setSintomasConfirmados({});
-    setSintomasIntensidade({});
-    setMostrarConfirmarSintomas(false);
-    setMostrarSintomasMaisFortes(false);
+    resetarApp();
   };
 
   const getBotaoVoltarClassName = () => {
@@ -180,7 +183,7 @@ function App() {
 
   const mostrarBotaoVoltar = sexoEscolhido !== null && !mostrarConfirmarSintomas && !mostrarSintomasMaisFortes && !mostrarFinalizar;
   
-  const deveMostrarBotaoConcluir = 
+  const deveMostrarBotaoFinalizar = 
     personagemEscolhido && !areaDorSelecionada && !mostrarConfirmarSintomas && !mostrarSintomasMaisFortes && !mostrarFinalizar && 
     Object.keys(sintomasConfirmados).length > 0;
 
@@ -228,9 +231,9 @@ function App() {
       {personagemEscolhido && !areaDorSelecionada && !mostrarConfirmarSintomas && !mostrarSintomasMaisFortes && !mostrarFinalizar && (
         <>
           <DoresSelector personagem={personagemEscolhido} onAreaSelect={handleAreaDorSelect} />
-          {deveMostrarBotaoConcluir && (
-          <button onClick={() => setMostrarConfirmarSintomas(true)} className={`botao-imagem concluir-btn ${isMobile ? 'botao-concluir-fix' : 'concluir-btn-direita'}`}>
-              <img src={concluirBtn} alt="Concluir Sintomas" />
+          {deveMostrarBotaoFinalizar && (
+          <button onClick={() => setMostrarConfirmarSintomas(true)} className={`botao-imagem finalizar-btn ${isMobile ? 'botao-finalizar-fix' : 'finalizar-btn-direita'}`}>
+              <img src={finalizarBtn} alt="Finalizar Sintomas" />
           </button>
           )}
         </>
@@ -243,6 +246,7 @@ function App() {
           onConfirmar={adicionarSintomas}
           onVoltar={handleVoltar}
           sintomasExistentes={sintomasConfirmados}
+          concluirBtn={concluirBtn}
         />
       )}
 
@@ -255,6 +259,7 @@ function App() {
           onFinalizar={handleFinalizarSintomas}
           mostrarBotaoVoltar={false}
           sexoSelecionado={sexoEscolhido}
+          concluirBtn={concluirBtn}
         />
       )}
 

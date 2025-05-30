@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import '../components/SelecionarAnimacoes.css';
-import confirmarAreaBtn from '../assets/imagens/finalizar-btn.png';
 import voltarBtn from '../assets/imagens/voltar-btn.png';
 
-const SelecionarAnimacoes = ({ areaSelecionada, sexoSelecionado, onConfirmar, onVoltar, sintomasExistentes = {} }) => {
+const SelecionarAnimacoes = ({ areaSelecionada, sexoSelecionado, onConfirmar, onVoltar, sintomasExistentes = {}, concluirBtn }) => {
   const mapearAreaParaCategoria = (area) => {
     if (area.includes('cabeca')) return 'cabeca';
     if (area.includes('barriga')) return 'barriga';
@@ -154,21 +153,14 @@ const SelecionarAnimacoes = ({ areaSelecionada, sexoSelecionado, onConfirmar, on
         )}
       </div>
 
-      {isMobile ? (
-        <>
-          <div className="botoes-fixos-mobile">
-            <button onClick={handleConfirmar} className="botao-confirmar-mobile">
-              <img src={confirmarAreaBtn} alt="Confirmar" />
-            </button>
-          </div>
-        </>
-      ) : (
-        <div className="botoes-animacao-container">
-          <button onClick={handleConfirmar} className="botao-imagem confirmar-btn">
-            <img src={confirmarAreaBtn} alt="Confirmar Sintomas da Área" />
-          </button>
-        </div>
-      )}
+      <div className="botoes-animacao-container">
+        <button 
+          onClick={handleConfirmar} 
+          className={`botao-imagem concluir-btn ${isMobile ? 'botao-concluir-fix' : 'concluir-btn-direita'}`}
+        >
+          <img src={concluirBtn} alt="Concluir Sintomas da Área" />
+        </button>
+      </div>
     </div>
   );
 };
